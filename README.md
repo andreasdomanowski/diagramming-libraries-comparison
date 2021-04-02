@@ -1,0 +1,13 @@
+#Comparing diagramming libraries for the generation of editors based on meta models
+## About this repository
+A part of my diploma thesis (_Model-Driven, (Semi-)Automatic Generation of Lightweight, Client-Side, Online Diagram Editors_) deals with the generation of client-side diagram editors based on meta models.
+
+For finding a suitable and flexible library for this task, two of the most promising candidates ([diagram-js](https://github.com/bpmn-io/diagram-js) and [JointJS](https://www.jointjs.com/opensource)) are evaluated. A set of basic requirements is stated and to be implemented with both libraries. The ease of working with each of them as well as the results determine the decision, which library is used for the final implementation. 
+
+## Requirements
+- implementation of a client-side web editor for basic geometric shapes and connections between them
+- 3 shapes: circle, rectangle, composition of rectangle comparable with UML class
+  - each shape has an associated label
+- connections between circles and rectangles and between rectangles and the composed shape   
+- functionality to add, manipulate and delete shapes on the drawing canvas
+- serialization of the diagram or underlying data model
