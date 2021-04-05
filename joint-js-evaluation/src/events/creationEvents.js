@@ -1,0 +1,1 @@
+export let createRectangleEvent = new CustomEvent("createRectangle", {x: 0, y: 0});

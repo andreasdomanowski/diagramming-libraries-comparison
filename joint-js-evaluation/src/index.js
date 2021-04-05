@@ -1,4 +1,6 @@
 import * as joint from 'jointjs'
+import * as contextMenu from './contextMenu'
+import * as creationEvents from './events/creationEvents'
 
 const graph = new joint.dia.Graph;
 
@@ -8,7 +10,7 @@ const paper = new joint.dia.Paper({
     width: 600,
     height: 600,
     gridSize: 1,
-    restrictTranslate : true
+    restrictTranslate: true
 });
 
 let rect = new joint.shapes.standard.Rectangle();
@@ -46,18 +48,24 @@ function addRectangle(x, y) {
     return rect;
 }
 
-function addCircle(x,y){
+function addCircle(x, y) {
     let circle = new joint.shapes.standard.Circle();
     circle.position(x, y);
     circle.addTo(graph);
     return circle;
 }
 
-paper.on('blank:contextmenu', function(evt, x, y) {
-    // open context menu
-
-    // get result from context menu
-
-    // create new shape
-});
+paper.on('blank:contextmenu',
+    /**
+     * @param evt               event emitted by jQuery
+     * @param evt.originalEvent originalEvent
+     */
+    function (evt, x, y) {
+        // open context menu
+        //let shapeToCreate = contextMenu.promptContextMenu("rmenu", evt.originalEvent.clientX, evt.originalEvent.clientY);
+        dispatchEvent(creationEvents.createRectangleEvent);
+        // get result from context menu
+        let a = ""
+        // create new shape
+    });
 
