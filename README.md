@@ -1,4 +1,4 @@
-#Comparing diagramming libraries for the generation of editors based on meta models
+# Comparing diagramming libraries for the generation of editors based on meta models
 ## About this repository
 A part of my diploma thesis (_Model-Driven, (Semi-)Automatic Generation of Lightweight, Client-Side, Online Diagram Editors_) deals with the generation of client-side diagram editors based on meta models.
 
