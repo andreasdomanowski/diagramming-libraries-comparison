@@ -2,6 +2,7 @@ import * as joint from 'jointjs'
 import * as $ from 'jquery';
 import * as customShapes from './js/customShape'
 import './css/joint-evaluation.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 // necessary for deserialization issues
 window.joint = joint
