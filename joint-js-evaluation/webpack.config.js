@@ -12,5 +12,13 @@ module.exports = {
         port: 9000,
     },
     mode: 'development',
-    devtool: 'source-map'
+    devtool: 'source-map',
+    module: {
+        rules: [
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+        ],
+    },
 };
