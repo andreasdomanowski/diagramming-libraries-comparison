@@ -1,6 +1,6 @@
 import * as joint from 'jointjs'
 import * as $ from 'jquery';
-import * as customShapes from './customShape'
+import * as customShapes from './js/customShape'
 import './css/joint-evaluation.css'
 
 // necessary for deserialization issues
