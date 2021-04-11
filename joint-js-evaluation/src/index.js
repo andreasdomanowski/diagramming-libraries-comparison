@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 import * as customShapes from './js/customShape'
 import './css/joint-evaluation.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap'
 
 // necessary for deserialization issues
 window.joint = joint
@@ -11,8 +12,8 @@ let graph = new joint.dia.Graph;
 let paper = new joint.dia.Paper({
     el: document.getElementById('diagramCanvas'),
     model: graph,
-    width: 800,
-    height: 600,
+    width: $("#diagramCanvas").width,
+    height: 500,
     gridSize: 1,
     restrictTranslate: true
 });
@@ -130,6 +131,12 @@ function parseInputAndDisplayGraph(inputString){
 
 $("#serializeButton").on("click", e => serializeGraph());
 
-$("#deserializeButton").on("click", e => parseInputAndDisplayGraph(
+/*$("#deserializeButton").on("click", e => parseInputAndDisplayGraph(
     $("#deserializeTextbox").val()
-));
+));*/
+$("#deserializeButton").on("click", e => {
+    $('#deserializationModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+    }
+);

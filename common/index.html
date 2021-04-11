@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <%= htmlWebpackPlugin.options.title %>
+    </title>
+</head>
+<body>
+
+<div class="container p-3 my-3 border" style="border:1px solid black">
+    <h2><%= htmlWebpackPlugin.options.title %></h2>
+
+    Requirements for the editor can be found <a href="https://github.com/andreasdomanowski/diagramming-libraries-comparison/blob/main/README.md">here</a>.
+</div>
+
+
+<div id="diagramCanvas" class="container p-3 my-3 border" style="border:1px solid black"></div>
+
+<div class="container p-3 my-3 border" style="border:1px solid black">
+    <button id="serializeButton" class="btn btn-primary">Serialize (modal)</button>
+    <button id="serializeConsoleButton" class="btn btn-primary">Serialize (console)</button>
+</div>
+
+<div class="container p-3 my-3 border" style="border:1px solid black">
+    <div class="form-group">
+        <label for="deserializationTextarea">JSON containing serialized graph/model:</label>
+        <textarea class="form-control" id="deserializationTextarea" rows="5"></textarea>
+    </div>
+    <button id="deserializeButton" type="button" class="btn btn-primary">Deserialize</button>
+</div>
+
+
+<div class="hide" id="contextMenu">
+    <ul>
+        <li>
+            <a href="#" id="contextmenu-addRect-trigger">Add Rectangle</a>
+        </li>
+        <li>
+            <a href="#" id="contextmenu-addCircle-trigger">Add Circle</a>
+        </li>
+        <li>
+            <a href="#" id="contextmenu-addComposedShape-trigger">Add Composed Shape</a>
+        </li>
+        <li>
+            <a href="#" id="contextmenu-close-trigger">Close</a>
+        </li>
+    </ul>
+</div>
+
+
+
+
+</body>
+</html>

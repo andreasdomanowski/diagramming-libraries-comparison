@@ -25,7 +25,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'JointJS Evaluation',
-            template: './src/index.html'
+            template: './../common/index.html',
         })
     ]
 };

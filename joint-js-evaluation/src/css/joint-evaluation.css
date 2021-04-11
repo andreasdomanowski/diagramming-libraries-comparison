@@ -22,7 +22,3 @@
 .show a:hover {
     text-decoration: underline !important;
 }
-
-#diagramCanvas {
-    border: double
-}
