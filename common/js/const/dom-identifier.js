@@ -8,3 +8,5 @@ export const contextmenu_addRect_trigger = "contextmenu-addRect-trigger";
 export const contextmenu_addCircle_trigger = "contextmenu-addCircle-trigger";
 export const contextmenu_addComposedShape_trigger = "contextmenu-addComposedShape-trigger";
 export const contextmenu_close_trigger = "contextmenu-close-trigger";
+export const modalIdentifier = "serializationModal"
+export const modalSerializationContent = "modalSerializationContent";

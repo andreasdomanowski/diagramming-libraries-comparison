@@ -4,6 +4,7 @@ import * as customShapes from './js/customShape'
 import './css/joint-evaluation.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap'
+import * as dom_identifier from '../../common/js/const/dom-identifier'
 
 // necessary for deserialization issues
 window.joint = joint
@@ -20,21 +21,14 @@ let paper = new joint.dia.Paper({
 
 let rect = new joint.shapes.standard.Rectangle();
 rect.position(100, 30);
-rect.resize(100, 40);
-rect.attr({
-    body: {
-        fill: 'blue'
-    },
-    label: {
-        text: 'Hello',
-        fill: 'white'
-    }
-});
+rect.resize(130, 40);
+rect.attr('label/text', 'First rectangle');
 rect.addTo(graph);
 
-let rect2 = rect.clone();
-rect2.translate(300, 0);
-rect2.attr('label/text', 'World!');
+let rect2 = new joint.shapes.standard.Rectangle();
+rect2.position(400, 60);
+rect2.resize(130, 40);
+rect2.attr('label/text', 'Second rectangle');
 rect2.addTo(graph);
 
 let link = new joint.shapes.standard.Link();
@@ -116,11 +110,23 @@ $("#diagramCanvas").on("addRectangle", function (event, x, y) {
     addRectangle(contextMenuX, contextMenuY);
 });
 
-function serializeGraph() {
+// serialization
+$("#" + dom_identifier.serializeConsoleButton).on("click", e => {
     console.log(graph.toJSON());
-    return graph.toJSON();
+});
+
+$("#" + dom_identifier.serializeButton).on("click", e => {
+    showInModal(JSON.stringify(graph.toJSON()));
+});
+
+function showInModal(modalSerializationContent){
+    $("#" + dom_identifier.modalSerializationContent).html(modalSerializationContent);
+    $("#" + dom_identifier.modalIdentifier).modal();
 }
 
+
+
+// deserialization
 function deserializeAndDisplayGraph(input) {
     paper.options.model.set(input)
 }
@@ -128,9 +134,6 @@ function deserializeAndDisplayGraph(input) {
 function parseInputAndDisplayGraph(inputString){
     deserializeAndDisplayGraph(JSON.parse(inputString));
 }
-
-$("#serializeButton").on("click", e => serializeGraph());
-
 /*$("#deserializeButton").on("click", e => parseInputAndDisplayGraph(
     $("#deserializeTextbox").val()
 ));*/
