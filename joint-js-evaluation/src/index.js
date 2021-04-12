@@ -9,11 +9,13 @@ import * as dom_identifier from '../../common/js/const/dom-identifier'
 // necessary for deserialization issues
 window.joint = joint
 
+let diagramCanvas = $("#diagramCanvas");
+
 let graph = new joint.dia.Graph;
 let paper = new joint.dia.Paper({
-    el: document.getElementById('diagramCanvas'),
+    el: diagramCanvas,
     model: graph,
-    width: $("#diagramCanvas").width,
+    width: diagramCanvas.width,
     height: 500,
     gridSize: 1,
     restrictTranslate: true
@@ -64,10 +66,6 @@ function addComposedShape(x, y) {
 }
 
 paper.on('blank:contextmenu',
-    /**
-     * @param evt               event emitted by jQuery
-     * @param evt.originalEvent originalEvent
-     */
     function (evt, x, y) {
         let localPoint1 = paper.localToPagePoint(x, y);
 
@@ -91,35 +89,35 @@ function showContextMenu() {
     $("#" + dom_identifier.contextMenu).removeClass("hide").addClass("show");
 }
 
-$("#contextmenu-addRect-trigger").on("click", function (event, x, y) {
+$("#" + dom_identifier.contextmenu_addRect_trigger).on("click", function () {
     addRectangle(contextMenuX, contextMenuY);
     hideContextMenu();
 });
 
-$("#contextmenu-addCircle-trigger").on("click", function (event, x, y) {
+$("#" + dom_identifier.contextmenu_addCircle_trigger).on("click", function () {
     addCircle(contextMenuX, contextMenuY);
     hideContextMenu();
 });
 
-$("#contextmenu-addComposedShape-trigger").on("click", function (event, x, y) {
-    addComposedShape(contextMenuY, contextMenuY);
+$("#" + dom_identifier.contextmenu_addComposedShape_trigger).on("click", function () {
+    addComposedShape(contextMenuX, contextMenuY);
     hideContextMenu();
 });
 
-$("#" + dom_identifier.contextmenu_close_trigger).on("click", function (event, x, y) {
+$("#" + dom_identifier.contextmenu_close_trigger).on("click", function () {
    hideContextMenu();
 });
 
-$("#diagramCanvas").on("addRectangle", function (event, x, y) {
+diagramCanvas.on("addRectangle", function () {
     addRectangle(contextMenuX, contextMenuY);
 });
 
 // serialization
-$("#" + dom_identifier.serializeConsoleButton).on("click", e => {
+$("#" + dom_identifier.serializeConsoleButton).on("click", () => {
     console.log(graph.toJSON());
 });
 
-$("#" + dom_identifier.serializeButton).on("click", e => {
+$("#" + dom_identifier.serializeButton).on("click", () => {
     showInModal(JSON.stringify(graph.toJSON()));
 });
 
@@ -130,7 +128,7 @@ function showInModal(modalSerializationContent) {
 
 
 // deserialization
-$("#" + dom_identifier.deserializeButton).on("click", e => parseInputAndDisplayGraph(
+$("#" + dom_identifier.deserializeButton).on("click", () => parseInputAndDisplayGraph(
     $("#" + dom_identifier.deserializationTextarea).val()
 ));
 
