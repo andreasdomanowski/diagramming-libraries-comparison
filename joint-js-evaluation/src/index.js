@@ -69,15 +69,12 @@ paper.on('blank:contextmenu',
      * @param evt.originalEvent originalEvent
      */
     function (evt, x, y) {
-        let localPoint1 = paper.localToPagePoint(x,y);
-
-        console.log(localPoint1);
+        let localPoint1 = paper.localToPagePoint(x, y);
 
         showContextMenu();
+
         document.getElementById(dom_identifier.contextMenu).style.top = localPoint1.y + 'px';
         document.getElementById(dom_identifier.contextMenu).style.left = localPoint1.x + 'px';
-
-
 
         paper.localToPagePoint();
         paper.clientToLocalPoint()
@@ -104,14 +101,13 @@ $("#contextmenu-addCircle-trigger").on("click", function (event, x, y) {
     hideContextMenu();
 });
 
-
 $("#contextmenu-addComposedShape-trigger").on("click", function (event, x, y) {
     addComposedShape(contextMenuY, contextMenuY);
     hideContextMenu();
 });
 
-$("#contextmenu-close-trigger").on("click", function (event, x, y) {
-    $("#rmenu").removeClass("show").addClass("hide");
+$("#" + dom_identifier.contextmenu_close_trigger).on("click", function (event, x, y) {
+   hideContextMenu();
 });
 
 $("#diagramCanvas").on("addRectangle", function (event, x, y) {
@@ -144,18 +140,18 @@ function parseInputAndDisplayGraph(inputString) {
 }
 
 function deserializeAndDisplayGraph(input) {
-/*    let graph2 = new joint.dia.Graph();
-    graph2.fromJSON(input);
-    graph.clear();
-    paper.remove();
-    paper = new joint.dia.Paper({
-        el: document.getElementById(dom_identifier.diagramCanvas),
-        model: graph2,
-        width: $("#diagramCanvas").width,
-        height: 500,
-        gridSize: 1,
-        restrictTranslate: true
-    });*/
+    /*    let graph2 = new joint.dia.Graph();
+        graph2.fromJSON(input);
+        graph.clear();
+        paper.remove();
+        paper = new joint.dia.Paper({
+            el: document.getElementById(dom_identifier.diagramCanvas),
+            model: graph2,
+            width: $("#diagramCanvas").width,
+            height: 500,
+            gridSize: 1,
+            restrictTranslate: true
+        });*/
 }
 
 
