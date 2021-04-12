@@ -138,18 +138,8 @@ function parseInputAndDisplayGraph(inputString) {
 }
 
 function deserializeAndDisplayGraph(input) {
-    /*    let graph2 = new joint.dia.Graph();
-        graph2.fromJSON(input);
         graph.clear();
-        paper.remove();
-        paper = new joint.dia.Paper({
-            el: document.getElementById(dom_identifier.diagramCanvas),
-            model: graph2,
-            width: $("#diagramCanvas").width,
-            height: 500,
-            gridSize: 1,
-            restrictTranslate: true
-        });*/
+        graph.fromJSON(input);
 }
 
 
