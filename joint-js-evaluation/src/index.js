@@ -69,21 +69,29 @@ paper.on('blank:contextmenu',
      * @param evt.originalEvent originalEvent
      */
     function (evt, x, y) {
-        // show context menu at right position
+        let localPoint1 = paper.localToPagePoint(x,y);
+
+        console.log(localPoint1);
+
         showContextMenu();
-        document.getElementById("rmenu").style.top = y + 'px';
-        document.getElementById("rmenu").style.left = x + 'px';
+        document.getElementById(dom_identifier.contextMenu).style.top = localPoint1.y + 'px';
+        document.getElementById(dom_identifier.contextMenu).style.left = localPoint1.x + 'px';
+
+
+
+        paper.localToPagePoint();
+        paper.clientToLocalPoint()
 
         contextMenuX = x;
         contextMenuY = y;
     });
 
 function hideContextMenu() {
-    $("#rmenu").removeClass("show").addClass("hide");
+    $("#" + dom_identifier.contextMenu).removeClass("show").addClass("hide");
 }
 
 function showContextMenu() {
-    $("#rmenu").removeClass("hide").addClass("show");
+    $("#" + dom_identifier.contextMenu).removeClass("hide").addClass("show");
 }
 
 $("#contextmenu-addRect-trigger").on("click", function (event, x, y) {
@@ -119,27 +127,35 @@ $("#" + dom_identifier.serializeButton).on("click", e => {
     showInModal(JSON.stringify(graph.toJSON()));
 });
 
-function showInModal(modalSerializationContent){
+function showInModal(modalSerializationContent) {
     $("#" + dom_identifier.modalSerializationContent).html(modalSerializationContent);
     $("#" + dom_identifier.modalIdentifier).modal();
 }
 
 
-
 // deserialization
-function deserializeAndDisplayGraph(input) {
-    paper.options.model.set(input)
+$("#" + dom_identifier.deserializeButton).on("click", e => parseInputAndDisplayGraph(
+    $("#" + dom_identifier.deserializationTextarea).val()
+));
+
+function parseInputAndDisplayGraph(inputString) {
+    let parsedJson = JSON.parse(inputString);
+    deserializeAndDisplayGraph(parsedJson);
 }
 
-function parseInputAndDisplayGraph(inputString){
-    deserializeAndDisplayGraph(JSON.parse(inputString));
+function deserializeAndDisplayGraph(input) {
+/*    let graph2 = new joint.dia.Graph();
+    graph2.fromJSON(input);
+    graph.clear();
+    paper.remove();
+    paper = new joint.dia.Paper({
+        el: document.getElementById(dom_identifier.diagramCanvas),
+        model: graph2,
+        width: $("#diagramCanvas").width,
+        height: 500,
+        gridSize: 1,
+        restrictTranslate: true
+    });*/
 }
-/*$("#deserializeButton").on("click", e => parseInputAndDisplayGraph(
-    $("#deserializeTextbox").val()
-));*/
-$("#deserializeButton").on("click", e => {
-    $('#deserializationModal').on('shown.bs.modal', function () {
-        $('#myInput').trigger('focus')
-    })
-    }
-);
+
+
