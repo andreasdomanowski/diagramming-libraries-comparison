@@ -29,8 +29,8 @@ let paper = new joint.dia.Paper({
 
 // populate initial graph
 (function () {
-    let rect1 = addRectangle(100,30);
-    let rect2 = addRectangle(400,60);
+    let rect1 = addRectangle(100, 30);
+    let rect2 = addRectangle(400, 60);
 
     let link = new joint.shapes.standard.Link();
     link.source(rect1);
@@ -89,35 +89,34 @@ function showContextMenu() {
     $("#" + dom_identifier.contextMenu).removeClass("hide").addClass("show");
 }
 
-$("#" + dom_identifier.contextmenu_addRect_trigger).click(function () {
-    addRectangle(contextMenuX, contextMenuY);
-    hideContextMenu();
-});
+// context menu event handling
 
-$("#" + dom_identifier.contextmenu_addCircle_trigger).click(function () {
-    addCircle(contextMenuX, contextMenuY);
-    hideContextMenu();
-});
+let contextMenuClickMapping = new Map([
+    [dom_identifier.contextmenu_addRect_trigger, addRectangle],
+    [dom_identifier.contextmenu_addCircle_trigger, addCircle],
+    [dom_identifier.contextmenu_addComposedShape_trigger, addComposedShape],
+    [dom_identifier.contextmenu_close_trigger, undefined]
+]);
 
-$("#" + dom_identifier.contextmenu_addComposedShape_trigger).click(function () {
-    addComposedShape(contextMenuX, contextMenuY);
-    hideContextMenu();
-});
+contextMenuClickMapping.forEach(
+    (value, key) => {
+        $("#" + key).click(function () {
+            if (value !== undefined) {
+                value.apply(null, [contextMenuX, contextMenuY]);
+            }
+            hideContextMenu();
+        });
 
-$("#" + dom_identifier.contextmenu_close_trigger).click(function () {
-    hideContextMenu();
-});
-
-diagramCanvas.on("addRectangle", function () {
-    addRectangle(contextMenuX, contextMenuY);
-});
+        hideContextMenu();
+    }
+)
 
 // serialization
 $("#" + dom_identifier.serializeConsoleButton).click(() => {
     console.log(graph.toJSON());
 });
 
-$("#" + dom_identifier.serializeButton).click( () => {
+$("#" + dom_identifier.serializeButton).click(() => {
     showInModal(JSON.stringify(graph.toJSON()));
 });
 
@@ -125,7 +124,6 @@ function showInModal(modalSerializationContent) {
     $("#" + dom_identifier.modalSerializationContent).html(modalSerializationContent);
     $("#" + dom_identifier.modalIdentifier).modal();
 }
-
 
 // deserialization
 $("#" + dom_identifier.deserializeButton).click(() => parseInputAndDisplayGraph(
@@ -141,5 +139,3 @@ function deserializeAndDisplayGraph(input) {
     graph.clear();
     graph.fromJSON(input);
 }
-
-
