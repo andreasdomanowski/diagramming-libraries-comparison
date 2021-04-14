@@ -30,3 +30,5 @@ export const CustomElement = joint.dia.Element.define(customShapeIdentifier,
             selector: 'label'
         }]
     });
+
+

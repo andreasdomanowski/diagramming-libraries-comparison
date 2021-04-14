@@ -4,40 +4,41 @@ import * as customShapes from './js/customShape'
 import './css/joint-evaluation.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap'
-import * as dom_identifier from '../../common/js/const/dom-identifier'
+import '@primer/octicons/build/build.css'
+import * as dom_identifier from './js/const/dom-identifier'
 
 // necessary for deserialization issues
 window.joint = joint
 
 let diagramCanvas = $("#diagramCanvas");
 
-let graph = new joint.dia.Graph;
+/*const graph = new joint.dia.Graph({}, {
+    cellNamespace: joint.shapes.standard
+});*/
+const graph = new joint.dia.Graph();
+
 let paper = new joint.dia.Paper({
     el: diagramCanvas,
     model: graph,
-    width: diagramCanvas.width,
+    cellViewNamespace: joint.shapes,
+    width: diagramCanvas.width(),
     height: 500,
     gridSize: 1,
     restrictTranslate: true
 });
 
-let rect = new joint.shapes.standard.Rectangle();
-rect.position(100, 30);
-rect.resize(130, 40);
-rect.attr('label/text', 'First rectangle');
-rect.addTo(graph);
+// populate initial graph
+(function () {
+    let rect1 = addRectangle(100,30);
+    let rect2 = addRectangle(400,60);
 
-let rect2 = new joint.shapes.standard.Rectangle();
-rect2.position(400, 60);
-rect2.resize(130, 40);
-rect2.attr('label/text', 'Second rectangle');
-rect2.addTo(graph);
+    let link = new joint.shapes.standard.Link();
+    link.source(rect1);
+    link.target(rect2);
+    link.addTo(graph);
+})();
 
-let link = new joint.shapes.standard.Link();
-link.source(rect);
-link.target(rect2);
-link.addTo(graph);
-
+// saves context menu position for avoiding busy waiting with callbacks on context menu click
 let contextMenuX = 0;
 let contextMenuY = 0;
 
@@ -74,9 +75,6 @@ paper.on('blank:contextmenu',
         document.getElementById(dom_identifier.contextMenu).style.top = localPoint1.y + 'px';
         document.getElementById(dom_identifier.contextMenu).style.left = localPoint1.x + 'px';
 
-        paper.localToPagePoint();
-        paper.clientToLocalPoint()
-
         contextMenuX = x;
         contextMenuY = y;
     });
@@ -105,7 +103,7 @@ $("#" + dom_identifier.contextmenu_addComposedShape_trigger).on("click", functio
 });
 
 $("#" + dom_identifier.contextmenu_close_trigger).on("click", function () {
-   hideContextMenu();
+    hideContextMenu();
 });
 
 diagramCanvas.on("addRectangle", function () {
@@ -138,8 +136,8 @@ function parseInputAndDisplayGraph(inputString) {
 }
 
 function deserializeAndDisplayGraph(input) {
-        graph.clear();
-        graph.fromJSON(input);
+    graph.clear();
+    graph.fromJSON(input);
 }
 
 
