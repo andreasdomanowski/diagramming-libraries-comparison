@@ -68,15 +68,17 @@ function addComposedShape(x, y) {
 
 paper.on('blank:contextmenu',
     function (evt, x, y) {
-        let localPoint1 = paper.localToPagePoint(x, y);
+        let popupCoordinate = paper.localToPagePoint(x, y);
 
-        showContextMenu();
-
-        document.getElementById(dom_identifier.contextMenu).style.top = localPoint1.y + 'px';
-        document.getElementById(dom_identifier.contextMenu).style.left = localPoint1.x + 'px';
+        $("#" + dom_identifier.contextMenu).css({
+            top: popupCoordinate.y + "px",
+            left: popupCoordinate.x + "px",
+        });
 
         contextMenuX = x;
         contextMenuY = y;
+
+        showContextMenu();
     });
 
 function hideContextMenu() {
