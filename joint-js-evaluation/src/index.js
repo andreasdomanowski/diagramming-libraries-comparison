@@ -89,22 +89,22 @@ function showContextMenu() {
     $("#" + dom_identifier.contextMenu).removeClass("hide").addClass("show");
 }
 
-$("#" + dom_identifier.contextmenu_addRect_trigger).on("click", function () {
+$("#" + dom_identifier.contextmenu_addRect_trigger).click(function () {
     addRectangle(contextMenuX, contextMenuY);
     hideContextMenu();
 });
 
-$("#" + dom_identifier.contextmenu_addCircle_trigger).on("click", function () {
+$("#" + dom_identifier.contextmenu_addCircle_trigger).click(function () {
     addCircle(contextMenuX, contextMenuY);
     hideContextMenu();
 });
 
-$("#" + dom_identifier.contextmenu_addComposedShape_trigger).on("click", function () {
+$("#" + dom_identifier.contextmenu_addComposedShape_trigger).click(function () {
     addComposedShape(contextMenuX, contextMenuY);
     hideContextMenu();
 });
 
-$("#" + dom_identifier.contextmenu_close_trigger).on("click", function () {
+$("#" + dom_identifier.contextmenu_close_trigger).click(function () {
     hideContextMenu();
 });
 
@@ -113,11 +113,11 @@ diagramCanvas.on("addRectangle", function () {
 });
 
 // serialization
-$("#" + dom_identifier.serializeConsoleButton).on("click", () => {
+$("#" + dom_identifier.serializeConsoleButton).click(() => {
     console.log(graph.toJSON());
 });
 
-$("#" + dom_identifier.serializeButton).on("click", () => {
+$("#" + dom_identifier.serializeButton).click( () => {
     showInModal(JSON.stringify(graph.toJSON()));
 });
 
@@ -128,7 +128,7 @@ function showInModal(modalSerializationContent) {
 
 
 // deserialization
-$("#" + dom_identifier.deserializeButton).on("click", () => parseInputAndDisplayGraph(
+$("#" + dom_identifier.deserializeButton).click(() => parseInputAndDisplayGraph(
     $("#" + dom_identifier.deserializationTextarea).val()
 ));
 
