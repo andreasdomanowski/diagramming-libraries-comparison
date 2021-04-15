@@ -31,7 +31,6 @@ function showContextMenu() {
 }
 
 // context menu event handling
-
 let contextMenuClickMapping = new Map([
     [dom_identifier.contextmenu_addRect_trigger, addElements.addRectangle],
     [dom_identifier.contextmenu_addCircle_trigger, addElements.addCircle],
