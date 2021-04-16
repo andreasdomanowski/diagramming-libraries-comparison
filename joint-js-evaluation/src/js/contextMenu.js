@@ -60,7 +60,6 @@ let currentLinkSourceCellView = undefined;
 
 paper.on('cell:pointerdblclick',
     function (cellView) {
-        stopLinkCreationMode();
         if (linkCreationMode === false) {
             linkCreationMode = true;
             currentLinkSourceCellView = cellView;
