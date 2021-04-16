@@ -60,6 +60,7 @@ let currentLinkSourceCellView = undefined;
 
 paper.on('cell:pointerdblclick',
     function (cellView) {
+        stopLinkCreationMode();
         if (linkCreationMode === false) {
             linkCreationMode = true;
             currentLinkSourceCellView = cellView;
@@ -67,12 +68,17 @@ paper.on('cell:pointerdblclick',
         }
     });
 
+function stopLinkCreationMode() {
+    linkCreationMode = false;
+    $("#" + currentLinkSourceCellView.id).removeClass("glow");
+}
+
 paper.on('cell:pointerclick', function (cellView) {
     if (linkCreationMode === true) {
         elementFactory.addLink(currentLinkSourceCellView.model, cellView.model, graph);
-        linkCreationMode = false;
-        $("#" + currentLinkSourceCellView.id).removeClass("glow");
+        stopLinkCreationMode();
     }
 });
+
 
 
