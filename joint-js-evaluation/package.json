@@ -7,7 +7,6 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "@primer/octicons": "^13.0.0",
     "bootstrap": "^4.6.0",
     "css-loader": "^5.2.1",
     "html-webpack-plugin": "^5.3.1",
