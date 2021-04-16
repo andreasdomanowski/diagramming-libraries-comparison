@@ -58,7 +58,7 @@ contextMenuClickMapping.forEach(
 let linkCreationMode = false;
 let currentLinkSourceCellView = undefined;
 
-paper.on('cell:pointerdblclick',
+paper.on('element:pointerdblclick',
     function (cellView) {
         if (linkCreationMode === false) {
             linkCreationMode = true;
@@ -72,11 +72,19 @@ function stopLinkCreationMode() {
     $("#" + currentLinkSourceCellView.id).removeClass("glow");
 }
 
-paper.on('cell:pointerclick', function (cellView) {
+paper.on('element:pointerclick', function (cellView) {
     if (linkCreationMode === true) {
         elementFactory.addLink(currentLinkSourceCellView.model, cellView.model, graph);
         stopLinkCreationMode();
     }
+});
+
+paper.on('element:mouseenter', function(elementView) {
+    elementView.showTools();
+});
+
+paper.on('element:mouseleave', function(elementView) {
+    elementView.hideTools();
 });
 
 
