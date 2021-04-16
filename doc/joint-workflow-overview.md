@@ -14,8 +14,7 @@
     - new element class has name, default properties, prototype properties, and static properties
     - markup for graphical representation usually defined in prototype properties
         - property _markup_ 
-- for creating completely new shapes, _joint.dia.Element.define(...)_ should be used+
-- for extending other shaped, _joint.shapes.standard.ShapeToInheritFrom.define(...)_ can be used
-
+- for creating completely new shapes, _joint.dia.Element.define(...)_ should be used
+- for extending other shapes, _joint.shapes.standard.ShapeToInheritFrom.define(...)_ can be used
 
 ##  Serialization

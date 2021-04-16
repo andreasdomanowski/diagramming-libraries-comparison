@@ -22,5 +22,6 @@ export function addComposedShape(x, y, graph) {
     newComposedShape.position(x, y);
     newComposedShape.resize(100, 40);
     newComposedShape.addTo(graph);
+    newComposedShape.attr('label/text', 'Label');
     return newComposedShape;
 }

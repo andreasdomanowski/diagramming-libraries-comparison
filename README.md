@@ -6,8 +6,11 @@ For finding a suitable and flexible library for this task, two of the most promi
 
 ## Requirements
 - implementation of a client-side web editor for basic geometric shapes and connections between them
-- 3 shapes: circle, rectangle, composition of rectangle comparable with UML class
-  - each shape has an associated label
+- three different shapes: 
+  - 1. circle
+  - 2. rectangle
+  - 3. composition of a rectangle and an ellipse
+- each shape has an associated label
 - connections between circles and rectangles and between rectangles and the composed shape   
 - functionality to add, manipulate and delete shapes on the drawing canvas
 - serialization of the diagram or underlying data model

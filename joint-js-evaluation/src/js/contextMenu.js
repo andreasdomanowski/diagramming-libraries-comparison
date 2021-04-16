@@ -1,7 +1,7 @@
 import {graph, paper} from "./graph";
 import * as $ from "jquery";
 import * as dom_identifier from "./const/dom-identifier";
-import * as addElements from "./addElements";
+import * as elementFactory from "./elementFactory";
 
 // saves context menu position for avoiding busy waiting with callbacks on context menu click
 let contextMenuX = 0;
@@ -32,9 +32,9 @@ function showContextMenu() {
 
 // context menu event handling
 let contextMenuClickMapping = new Map([
-    [dom_identifier.contextmenu_addRect_trigger, addElements.addRectangle],
-    [dom_identifier.contextmenu_addCircle_trigger, addElements.addCircle],
-    [dom_identifier.contextmenu_addComposedShape_trigger, addElements.addComposedShape],
+    [dom_identifier.contextmenu_addRect_trigger, elementFactory.addRectangle],
+    [dom_identifier.contextmenu_addCircle_trigger, elementFactory.addCircle],
+    [dom_identifier.contextmenu_addComposedShape_trigger, elementFactory.addComposedShape],
     [dom_identifier.contextmenu_close_trigger, undefined]
 ]);
 
