@@ -7,6 +7,7 @@ import * as elementFactory from "./elementFactory";
 let contextMenuX = 0;
 let contextMenuY = 0;
 
+// context menu for new elements - right click on empty canvas position
 paper.on('blank:contextmenu',
     function (evt, x, y) {
         let popupCoordinate = paper.localToPagePoint(x, y);
@@ -19,14 +20,14 @@ paper.on('blank:contextmenu',
         contextMenuX = x;
         contextMenuY = y;
 
-        showContextMenu();
+        showNewElementContextMenu();
     });
 
-function hideContextMenu() {
+function hideNewElementContextMenu() {
     $("#" + dom_identifier.contextMenu).removeClass("show").addClass("hide");
 }
 
-function showContextMenu() {
+function showNewElementContextMenu() {
     $("#" + dom_identifier.contextMenu).removeClass("hide").addClass("show");
 }
 
@@ -44,9 +45,34 @@ contextMenuClickMapping.forEach(
             if (value !== undefined) {
                 value.apply(null, [contextMenuX, contextMenuY, graph]);
             }
-            hideContextMenu();
+            hideNewElementContextMenu();
         });
 
-        hideContextMenu();
+        hideNewElementContextMenu();
     }
 )
+
+// mouseover on cells for link creation popup
+// double click triggers link creation mode
+// creation mode active, until either i) click on legal target or ii) context menu click anywhere
+let linkCreationMode = false;
+let currentLinkSourceCellView = undefined;
+
+paper.on('cell:pointerdblclick',
+    function (cellView) {
+        if (linkCreationMode === false) {
+            linkCreationMode = true;
+            currentLinkSourceCellView = cellView;
+            $("#" + currentLinkSourceCellView.id).addClass("glow");
+        }
+    });
+
+paper.on('cell:pointerclick', function (cellView) {
+    if (linkCreationMode === true) {
+        elementFactory.addLink(currentLinkSourceCellView.model, cellView.model, graph);
+        linkCreationMode = false;
+        $("#" + currentLinkSourceCellView.id).removeClass("glow");
+    }
+});
+
+

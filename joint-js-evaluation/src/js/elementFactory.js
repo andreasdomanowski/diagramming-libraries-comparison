@@ -25,3 +25,10 @@ export function addComposedShape(x, y, graph) {
     newComposedShape.attr('label/text', 'Label');
     return newComposedShape;
 }
+
+export function addLink(source, target, graph){
+    let link = new joint.shapes.standard.Link();
+    link.source(source);
+    link.target(target);
+    link.addTo(graph);
+}

@@ -23,6 +23,6 @@
     text-decoration: underline !important;
 }
 
-#contextMenu {
-
+.glow {
+    filter: drop-shadow(10px 0 5px red);
 }
