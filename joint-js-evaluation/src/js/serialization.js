@@ -13,7 +13,7 @@ $("#" + dom_identifier.serializeButton).click(() => {
 
 function showInModal(modalSerializationContent) {
     $("#" + dom_identifier.modalSerializationContent).html(modalSerializationContent);
-    $("#" + dom_identifier.modalIdentifier).modal();
+    $("#" + dom_identifier.modalSerializationIdentifier).modal();
 }
 
 // deserialization
