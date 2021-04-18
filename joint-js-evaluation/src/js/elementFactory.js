@@ -8,15 +8,6 @@ export function addRectangle(x, y, graph) {
     rect.resize(100, 40);
     rect.addTo(graph);
     addTools(rect);
-
-    rect.on("change:attrs", function(element){
-        let wraptext = joint.util.breakText('My text here', {
-            width: 0,
-            height: 0
-        });
-        console.log();
-    });
-
     return rect;
 }
 
