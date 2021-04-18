@@ -11,6 +11,6 @@ For finding a suitable and flexible library for this task, two of the most promi
   - 2. rectangle
   - 3. composition of a rectangle and an ellipse
 - Rectangles and shapes with rectangles have an associated label
-- connections between circles and rectangles and between rectangles and the composed shape   
+- links between shapes
 - functionality to add, manipulate and delete shapes on the drawing canvas
 - serialization of the diagram or underlying data model
