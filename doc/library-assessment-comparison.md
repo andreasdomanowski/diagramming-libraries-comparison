@@ -2,8 +2,10 @@
 All information which was taken into account for the decision for or against a diagramming library was gathered until april 2021.
 
 # Ease of development
-- JointJS is a mature library which provides an extensive documentation and examples, Diagram.js in comparison does neither
-
+- Documentation
+  - JointJS is a mature library which provides an extensive documentation and examples, Diagram.js in comparison does neither
+- "Gimmicks"
+  - Diagram.js offers functionality like resize handlers, key handlers, or direct editing, that JointJS offers just with Rappid (commercial version)
 # Customization
 
 # Usability
