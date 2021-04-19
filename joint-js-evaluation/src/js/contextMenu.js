@@ -2,7 +2,7 @@ import {graph, paper} from "./graph";
 import * as $ from "jquery";
 import * as dom_identifier from "./const/dom-identifier";
 import * as elementFactory from "./elementFactory";
-import 'bootstrap/dist/js/popper.min.js';
+import 'popper.js'
 
 // saves context menu position for avoiding busy waiting with callbacks on context menu click
 let contextMenuX = 0;
