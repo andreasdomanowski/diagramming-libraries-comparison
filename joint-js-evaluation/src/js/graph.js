@@ -2,13 +2,20 @@ import * as $ from "jquery";
 import * as joint from "jointjs";
 import {addCircle, addRectangle} from './elementFactory'
 import * as dom_identifier from './const/dom-identifier'
+import * as customShapes from "./customShape";
 
 let diagramCanvas = $("#"+dom_identifier.diagramCanvas);
 
-export const graph = new joint.dia.Graph({},
-    {
-        cellNamespace : joint.shapes
-    });
+const { standard } = joint.shapes;
+
+export const graph = new joint.dia.Graph({}, {
+    cellNamespace: {
+        standard,
+        [customShapes.customNamespace]: {
+            [customShapes.customShapeIdentifier] : customShapes.CustomElement
+        }
+    }
+});
 
 export let paper = new joint.dia.Paper({
     el: diagramCanvas,

@@ -1,10 +1,13 @@
 import * as joint from 'jointjs'
 
-export const customShapeIdentifier = "devs.customShapes.CustomShape";
+export const customNamespace = "customShapes";
+export const customShapeIdentifier = customNamespace + "CustomShape";
 
+function defineShapeName(shapeName){
+    return customNamespace + "." + shapeName;
+}
 
-
-export const CustomElement = joint.dia.Element.define(customShapeIdentifier, {
+export const CustomElement = joint.dia.Element.define(defineShapeName(customShapeIdentifier), {
     attrs: {
         outerRect: {
             refWidth: '100%',
@@ -43,6 +46,3 @@ export const CustomElement = joint.dia.Element.define(customShapeIdentifier, {
         selector: 'label'
     }]
 });
-
-joint.shapes.devs.customShapes = {};
-joint.shapes.devs.customShapes.CustomShape = CustomElement;
