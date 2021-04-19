@@ -7,12 +7,12 @@
     "build": "webpack"
   },
   "devDependencies": {
-    "@popperjs/core": "^2.9.2",
     "bootstrap": "^4.6.0",
     "css-loader": "^5.2.1",
     "html-webpack-plugin": "^5.3.1",
     "jointjs": "^3.3.1",
     "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.30.0",
     "webpack-cli": "^4.6.0",
