@@ -1,6 +1,8 @@
 import * as joint from 'jointjs'
 
-export const customShapeIdentifier = "customShapes.CustomShape";
+export const customShapeIdentifier = "devs.customShapes.CustomShape";
+
+
 
 export const CustomElement = joint.dia.Element.define(customShapeIdentifier, {
     attrs: {
@@ -42,4 +44,5 @@ export const CustomElement = joint.dia.Element.define(customShapeIdentifier, {
     }]
 });
 
-
+joint.shapes.devs.customShapes = {};
+joint.shapes.devs.customShapes.CustomShape = CustomElement;

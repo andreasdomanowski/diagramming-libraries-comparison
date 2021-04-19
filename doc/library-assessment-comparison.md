@@ -17,9 +17,11 @@ Disclaimer: all information which was taken into account for the decision for or
 ### Ease Of Implementing the Requirements
 ### Customizability
 - easy implementation of custom shapes with abstraction layer for SVG stacking
+- events and callbacks for actions on elements can be defined very easily
 ### Implementation Effort for Usability Aspects
 - Palette/element creation tools have to be implemented
   - chosen path: context menu for element creation, *tools* for element deletion, double click for link creation
+- resize handlers have to be implemented by hand - big con!
 ### Support and Questions
 -  many posts on StackOverflow, issues with solutions on GitHub
  

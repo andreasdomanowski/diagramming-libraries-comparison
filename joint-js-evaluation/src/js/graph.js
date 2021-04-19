@@ -3,9 +3,6 @@ import * as joint from "jointjs";
 import {addCircle, addRectangle} from './elementFactory'
 import * as dom_identifier from './const/dom-identifier'
 
-// necessary for deserialization issues
-window.joint = joint;
-
 let diagramCanvas = $("#"+dom_identifier.diagramCanvas);
 
 export const graph = new joint.dia.Graph({},
