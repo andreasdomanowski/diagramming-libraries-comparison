@@ -1,23 +1,33 @@
-# Disclaimer
-All information which was taken into account for the decision for or against a diagramming library was gathered until april 2021.
+# Assessing diagramming libraries - JointJS vs. Diagram.js
+Disclaimer: all information which was taken into account for the decision for or against a diagramming library was gathered until april 2021.
 
-# Ease of development
-- Documentation
-  - JointJS is a mature library which provides an extensive documentation and examples, Diagram.js in comparison does neither
-- considering "Gimmicks"
-  - JointJS
-    - Palette/element creation tools have to be implemented
-    - resizing on custom elements has to be implemented
-  - Diagram.js resize handlers, key handlers, or direct editing, that JointJS offers just with Rappid (commercial version)
+## Analysis scheme
+- initial effort to get started
+- ease of implementing the requirements
+- customizability
+- implementation effort for usability aspects
+- support and questions
 
-# Customization
-- JointJS
-  - easy implementation of custom shapes with abstraction layer for SVG stacking
+## JointJS
+### Initial Effort to Get Started
+- very low initial effort was needed
+### Documentation and Examples
+- JointJS is a mature library which provides an extensive documentation and examples
+- examples provided for not just the basic use cases, but more complex applications and facets, too
+### Ease Of Implementing the Requirements
+### Customizability
+- easy implementation of custom shapes with abstraction layer for SVG stacking
+### Implementation Effort for Usability Aspects
+- Palette/element creation tools have to be implemented
+  - chosen path: context menu for element creation, *tools* for element deletion, double click for link creation
+### Support and Questions
+-  many posts on StackOverflow, issues with solutions on GitHub
+ 
 
-# Usability
-- Diagram.js provides convenient tools like a palette or context actions. JointJS unfortunately does not, just its big (commercial) brother Rappid.
-
-# Community support
-- considering e.g. StackOverflow or vendor message boards, JointJS excels Diagram.js
-    - JointJS - many post/problems and solutions can be found
-    - Diagram.js - posts mostly about BPMN.io (solution built on top of Diagram.js), almost nothing on StackOverflow
+## Diagram.js
+### Initial Effort to Get Started
+### Documentation and Examples
+### Ease Of Implementing the Requirements
+### Customizability
+### Implementation Effort for Usability Aspects
+### Support and Questions
