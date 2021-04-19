@@ -2,7 +2,11 @@
 ## About this repository
 A part of my diploma thesis (_Model-Driven, (Semi-)Automatic Generation of Lightweight, Client-Side, Online Diagram Editors_) deals with the generation of client-side diagram editors based on meta models.
 
-For finding a suitable and flexible library for this task, two of the most promising candidates ([diagram-js](https://github.com/bpmn-io/diagram-js) and [JointJS](https://www.jointjs.com/opensource)) are evaluated. A set of basic requirements is stated and to be implemented with both libraries. The ease of working with each of them as well as the results determine the decision, which library is used for the final implementation. 
+For finding a suitable and flexible library for this task, two of the most promising candidates ([diagram-js](https://github.com/bpmn-io/diagram-js) and [JointJS](https://www.jointjs.com/opensource)) are evaluated. A set of basic requirements is stated and to be implemented with both libraries. The ease of working with each of them as well as the results determine the decision, which library is used for the final implementation.
+
+## Build
+- run `npm install` followed by a `npm run start:dev` in the respective subdirectories to start the webpack development servers
+- run `npm build` for building each project
 
 ## Requirements
 - implementation of a client-side web editor for basic geometric shapes and connections between them
@@ -14,3 +18,6 @@ For finding a suitable and flexible library for this task, two of the most promi
 - links between shapes
 - functionality to add, manipulate and delete shapes on the drawing canvas
 - serialization of the diagram or underlying data model
+
+## Built editors
+- the implemented editors can be found [here](https://andreasdomanowski.github.io/diagramming-libraries-comparison/)
