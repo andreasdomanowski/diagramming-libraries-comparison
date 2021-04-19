@@ -4,9 +4,15 @@ All information which was taken into account for the decision for or against a d
 # Ease of development
 - Documentation
   - JointJS is a mature library which provides an extensive documentation and examples, Diagram.js in comparison does neither
-- "Gimmicks"
-  - Diagram.js offers functionality like resize handlers, key handlers, or direct editing, that JointJS offers just with Rappid (commercial version)
+- considering "Gimmicks"
+  - JointJS
+    - Palette/element creation tools have to be implemented
+    - resizing on custom elements has to be implemented
+  - Diagram.js resize handlers, key handlers, or direct editing, that JointJS offers just with Rappid (commercial version)
+
 # Customization
+- JointJS
+  - easy implementation of custom shapes with abstraction layer for SVG stacking
 
 # Usability
 - Diagram.js provides convenient tools like a palette or context actions. JointJS unfortunately does not, just its big (commercial) brother Rappid.

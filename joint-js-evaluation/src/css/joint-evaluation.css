@@ -26,3 +26,13 @@
 .glow {
     filter: drop-shadow(10px 0 5px #0069d9);
 }
+
+#diagramCanvas {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#serializationButtonGroup {
+    margin-top: 20px;
+}
+

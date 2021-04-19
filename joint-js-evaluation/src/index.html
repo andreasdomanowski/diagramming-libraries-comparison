@@ -7,33 +7,40 @@
 </head>
 <body>
 <div class="container">
-    <div>
+    <div class="container border">
         <h2>JointJS Evaluation</h2>
         <p>
-            Requirements for the editor can be found <a href="https://github.com/andreasdomanowski/diagramming-libraries-comparison/blob/main/README.md">here</a>.
-            Inside the container canvas, the context menu can be used to create new shapes. A double click on an element selects it to be a link source.
-            A click on another element then selects this element as the link target and draws the link. Labels can be edited by a context menu click on an element.
+            Requirements for the editor can be found <a
+                href="https://github.com/andreasdomanowski/diagramming-libraries-comparison/blob/main/README.md">here</a>.
+            Inside the container canvas, the context menu can be used to create new shapes. A double click on an element
+            selects it to be a link source.
+            A click on another element then selects this element as the link target and draws the link. Labels can be
+            edited by a context menu click on an element.
         </p>
 
         <p>
-            The purpose of this demo is just to get in touch with the API of JointJS - and to refresh my rusty knowledge of JS in general as well as to get used to Webpack and the Node ecosystem.
+            The purpose of this demo is just to get in touch with the API of JointJS - and to refresh my rusty knowledge
+            of JS in general as well as to get used to Webpack and the Node ecosystem.
         </p>
     </div>
 
 
-    <div id="diagramCanvas"></div>
+    <div id="diagramCanvas" class="border"></div>
 
-    <div>
-        <button id="serializeButton" class="btn btn-primary">Serialize (modal)</button>
-        <button id="serializeConsoleButton" class="btn btn-primary">Serialize (console)</button>
-    </div>
+    <div class="container border">
 
-    <div>
-        <div class="form-group">
+        <div class="form-group" id="serializationButtonGroup">
+            <button id="serializeButton" class="btn btn-primary">Serialize (modal)</button>
+            <button id="serializeConsoleButton" class="btn btn-primary">Serialize (console)</button>
+        </div>
+        <div class="form-group" id="deserializationGroup">
             <label for="deserializationTextarea">JSON containing serialized graph/model:</label>
             <textarea class="form-control" id="deserializationTextarea" rows="5"></textarea>
         </div>
-        <button id="deserializeButton" type="button" class="btn btn-primary">Deserialize</button>
+        <div class="form-group">
+            <button id="deserializeButton" type="button" class="btn btn-primary">Deserialize</button>
+        </div>
+
     </div>
 
 
@@ -43,7 +50,8 @@
     <div class="list-group bg-gradient-primary">
         <a href="#" class="list-group-item list-group-item-action" id="contextmenu-addRect-trigger">Add Rectangle</a>
         <a href="#" class="list-group-item list-group-item-action" id="contextmenu-addCircle-trigger">Add Circle</a>
-        <a href="#" class="list-group-item list-group-item-action" id="contextmenu-addComposedShape-trigger">Add Composed Shape</a>
+        <a href="#" class="list-group-item list-group-item-action" id="contextmenu-addComposedShape-trigger">Add
+            Composed Shape</a>
         <a href="#" class="list-group-item list-group-item-action" id="contextmenu-close-trigger">Close</a>
     </div>
 </div>
@@ -53,7 +61,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-               Serialized graph/model
+                Serialized graph/model
             </div>
             <div class="modal-body" id="modalSerializationContent">
             </div>
