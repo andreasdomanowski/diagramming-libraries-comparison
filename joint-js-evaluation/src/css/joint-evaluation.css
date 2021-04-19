@@ -1,0 +1,38 @@
+.show {
+    z-index: 1000;
+    position: absolute;
+    border: 1px solid black;
+    padding: 2px;
+    display: block;
+    margin: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.show li {
+}
+
+.show a {
+    border: 0 !important;
+    text-decoration: none;
+}
+
+.show a:hover {
+    text-decoration: underline !important;
+}
+
+.glow {
+    filter: drop-shadow(10px 0 5px #0069d9);
+}
+
+#diagramCanvas {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#serializationButtonGroup {
+    margin-top: 20px;
+}
+
