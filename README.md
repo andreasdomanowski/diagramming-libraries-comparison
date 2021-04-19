@@ -19,5 +19,9 @@ For finding a suitable and flexible library for this task, two of the most promi
 - functionality to add, manipulate and delete shapes on the drawing canvas
 - serialization of the diagram or underlying data model
 
-## Built editors
-- the implemented editors can be found [here](https://andreasdomanowski.github.io/diagramming-libraries-comparison/)
+## Results
+- the built editors can be found [here](https://andreasdomanowski.github.io/diagramming-libraries-comparison/)
+- a summary of the results is documented in the [docs subfolder](https://github.com/andreasdomanowski/diagramming-libraries-comparison/tree/main/doc)
+
+## License
+- MIT, see [LICENSE](https://github.com/andreasdomanowski/diagramming-libraries-comparison/blob/main/LICENSE)
