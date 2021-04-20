@@ -37,3 +37,5 @@ Disclaimer: all information which was taken into account for the decision for or
 ### Miscellaneous aspects
 - [example editor](https://github.com/bpmn-io/diagram-js-examples) provided by maintainers contains bugs that catch the eye
   - if an element is clicked repeatedly, it gets stuck to the mouse pointer and can't be dropped
+  - moving the predefined connected rectangles results in the link having the highest "z-index". Combined with the anchor being the middle of the rectangle, this definitely catches the eye, too
+  
