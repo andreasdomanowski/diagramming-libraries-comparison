@@ -1,0 +1,76 @@
+<html>
+  <head>
+
+    <title>
+      Diagram-js Evaluation
+    </title>
+
+    <style>
+      html,
+      body,
+      #canvas,
+      #canvas > div {
+          height: 100%;
+          margin: 0;
+      }
+
+      .palette-icon-lasso-tool {
+        background: url('data:image/svg+xml,%3Csvg%0A%20%20%20%20%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20%0A%20%20%20%20%20fill%3D%22none%22%0A%20%20%20%20%20stroke%3D%22%23000%22%0A%20%20%20%20%20stroke-width%3D%221.5%22%0A%20%20%20%20%20width%3D%2246%22%0A%20%20%20%20%20height%3D%2246%22%3E%0A%20%20%3Crect%20x%3D%2210%22%20y%3D%2210%22%20width%3D%2216%22%20height%3D%2216%22%20stroke-dasharray%3D%225%2C%205%22%20%2F%3E%0A%20%20%3Cline%20x1%3D%2216%22%20y1%3D%2226%22%20x2%3D%2236%22%20y2%3D%2226%22%20stroke%3D%22black%22%20%2F%3E%0A%20%20%3Cline%20x1%3D%2226%22%20y1%3D%2216%22%20x2%3D%2226%22%20y2%3D%2236%22%20stroke%3D%22black%22%20%2F%3E%0A%3C%2Fsvg%3E');
+      }
+
+      .palette-icon-create-shape {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Crect%20x%3D%2210%22%20y%3D%2213%22%20width%3D%2226%22%20height%3D%2220%22%2F%3E%3C%2Fsvg%3E');
+      }
+
+      .palette-icon-create-frame {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20stroke-dasharray%3D%224%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Crect%20x%3D%2210%22%20y%3D%2213%22%20width%3D%2226%22%20height%3D%2220%22%2F%3E%3C%2Fsvg%3E');
+      }
+
+      .context-pad-icon-remove {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Cline%20x1%3D%225%22%20y1%3D%225%22%20x2%3D%2215%22%20y2%3D%2215%22%2F%3E%3Cline%20x1%3D%2215%22%20y1%3D%225%22%20x2%3D%225%22%20y2%3D%2215%22%2F%3E%3C%2Fsvg%3E') !important;
+      }
+
+      .context-pad-icon-connect {
+        background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Cline%20x1%3D%2215%22%20y1%3D%225%22%20x2%3D%225%22%20y2%3D%2215%22%2F%3E%3C%2Fsvg%3E') !important;
+      }
+    </style>
+  <script defer src="main.js"></script></head>
+  <body>
+  <div class="container">
+    <div class="container border">
+      <h2>Diagram-js Evaluation</h2>
+      <p>
+        Requirements for the editor can be found <a
+              href="https://github.com/andreasdomanowski/diagramming-libraries-comparison/blob/main/README.md">here</a>.
+      </p>
+
+      <p>
+        The purpose of this demo is just to get in touch with the API of Diagram.js - and to refresh my rusty knowledge
+        of JS in general as well as to get used to Webpack and the Node ecosystem. This editor is based on an
+        <a href="https://github.com/bpmn-io/diagram-js-examples">example</a> provided by the maintainers of diagram-js.
+      </p>
+    </div>
+
+
+    <div id="diagramCanvas" class="border" style="height: 600px"></div>
+
+    <div class="container border">
+
+      <div class="form-group" id="serializationButtonGroup">
+        <button id="serializeButton" class="btn btn-primary">Serialize (modal)</button>
+        <button id="serializeConsoleButton" class="btn btn-primary">Serialize (console)</button>
+      </div>
+      <div class="form-group" id="deserializationGroup">
+        <label for="deserializationTextarea">JSON containing serialized graph/model:</label>
+        <textarea class="form-control" id="deserializationTextarea" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <button id="deserializeButton" type="button" class="btn btn-primary">Deserialize</button>
+      </div>
+
+    </div>
+
+
+  </div>
+  </body>
+</html>
