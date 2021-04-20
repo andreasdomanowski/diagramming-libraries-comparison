@@ -7,6 +7,7 @@ Disclaimer: all information which was taken into account for the decision for or
 - customizability
 - implementation effort for usability aspects
 - support and questions
+- miscellaneous aspects
 
 ## JointJS
 ### Initial Effort to Get Started
@@ -33,3 +34,6 @@ Disclaimer: all information which was taken into account for the decision for or
 ### Customizability
 ### Implementation Effort for Usability Aspects
 ### Support and Questions
+### Miscellaneous aspects
+- [example editor](https://github.com/bpmn-io/diagram-js-examples) provided by maintainers contains bugs that catch the eye
+  - if an element is clicked repeatedly, it gets stuck to the mouse pointer and can't be dropped
