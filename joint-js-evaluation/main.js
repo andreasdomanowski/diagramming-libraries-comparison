@@ -73991,7 +73991,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const customNamespace = "customShapes";
-const customShapeIdentifier = customNamespace + "CustomShape";
+const customShapeIdentifier = customNamespace + "." +"CustomShape";
 
 function defineShapeName(shapeName){
     return customNamespace + "." + shapeName;
@@ -74051,29 +74051,55 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _const_dom_identifier__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./const/dom-identifier */ "./src/js/const/dom-identifier.js");
-/* harmony import */ var _graph__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./graph */ "./src/js/graph.js");
+/* harmony import */ var _customShape__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./customShape */ "./src/js/customShape.js");
+/* harmony import */ var _graph__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./graph */ "./src/js/graph.js");
 
 
 
 
-const maxLabelLength = 12;
+
+
+const maxLabelLengthRectangle = 12;
+const maxLabelLengthCircle = 5;
+
+const rectangleIdentifier = "standard.Rectangle";
+const circleIdentifier = "standard.Circle";
+
+const composedIdentifier = _customShape__WEBPACK_IMPORTED_MODULE_2__.customNamespace + "." + _customShape__WEBPACK_IMPORTED_MODULE_2__.customShapeIdentifier;
+
+const pruneString = "...";
+const pruneLength = pruneString.length;
+
+
 
 function showEditPropertiesModal() {
     jquery__WEBPACK_IMPORTED_MODULE_0__("#" + _const_dom_identifier__WEBPACK_IMPORTED_MODULE_1__.modalEditPropertyIdentifier).modal();
 }
 
-_graph__WEBPACK_IMPORTED_MODULE_2__.paper.on('element:contextmenu',
+let currentCelLView = undefined;
+
+_graph__WEBPACK_IMPORTED_MODULE_3__.paper.on('element:contextmenu',
     function (cellView) {
+        currentCelLView = cellView;
         showEditPropertiesModal();
         let inputField = jquery__WEBPACK_IMPORTED_MODULE_0__("#"+_const_dom_identifier__WEBPACK_IMPORTED_MODULE_1__.modalEditPropertyContent);
         inputField.val(cellView.model.attr("label/text"));
         // if this was not a proof of concept, listener should be removed again
         inputField.on("change", function (){
             let newLabel = inputField.val();
-            if(newLabel.length > maxLabelLength){
-                newLabel = newLabel.slice(0,maxLabelLength-3) + "...";
+
+            let maxLabelLength = undefined;
+
+            if(currentCelLView.model.attributes.type === rectangleIdentifier || currentCelLView.model.attributes.type === composedIdentifier){
+                maxLabelLength = maxLabelLengthRectangle;
             }
-            cellView.model.attr("label/text", newLabel);
+
+            if(currentCelLView.model.attributes.type === circleIdentifier){
+                maxLabelLength = maxLabelLengthCircle;
+            }
+
+            newLabel = newLabel.slice(0,maxLabelLength- pruneLength) + pruneString;
+            currentCelLView.model.attr("label/text", newLabel);
         });
     });
 
