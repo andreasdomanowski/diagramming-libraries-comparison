@@ -73991,7 +73991,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const customNamespace = "customShapes";
-const customShapeIdentifier = customNamespace + "." +"CustomShape";
+const customShapeIdentifier = "CustomShape";
 
 function defineShapeName(shapeName){
     return customNamespace + "." + shapeName;
