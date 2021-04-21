@@ -1,7 +1,7 @@
 import * as joint from 'jointjs'
 
 export const customNamespace = "customShapes";
-export const customShapeIdentifier = customNamespace + "." +"CustomShape";
+export const customShapeIdentifier = "CustomShape";
 
 function defineShapeName(shapeName){
     return customNamespace + "." + shapeName;
