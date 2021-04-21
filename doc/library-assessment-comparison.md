@@ -29,11 +29,15 @@ Disclaimer: all information which was taken into account for the decision for or
 
 ## Diagram.js
 ### Initial Effort to Get Started
+- relatively hard, due to the lack of documentation, just the example project is given
 ### Documentation and Examples
+- just one example repository
+- 
 ### Ease Of Implementing the Requirements
 ### Customizability
 ### Implementation Effort for Usability Aspects
 ### Support and Questions
+- barely anything for diagram-js, but an active community around bpmn-js, which is built on top of diagram-js
 ### Miscellaneous aspects
 - [example editor](https://github.com/bpmn-io/diagram-js-examples) provided by maintainers contains bugs that catch the eye
   - if an element is clicked repeatedly, it gets stuck to the mouse pointer and can't be dropped
