@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/diagram-js-evaluation.css'
 
 import Editor from './editor'
+import * as shapeIdentifiers from './js/shapes/EvaluationShapes'
 
 
 
@@ -26,6 +27,7 @@ let shape1 = elementFactory.createShape({
     width: 100,
     height: 80
 });
+shape1.customShapeIdentifier = shapeIdentifiers.shapeRectangleIdentifier;
 
 canvas.addShape(shape1, root);
 
@@ -35,7 +37,7 @@ let shape2 = elementFactory.createShape({
     width: 100,
     height: 80
 });
-
+shape2.customShapeIdentifier = shapeIdentifiers.shapeCircleIdentifier;
 canvas.addShape(shape2, root);
 
 
@@ -57,22 +59,6 @@ let shape3 = elementFactory.createShape({
     width: 100,
     height: 80
 });
+shape3.customShapeIdentifier = shapeIdentifiers.shapeComposedShapeIdentifier;
 
 canvas.addShape(shape3, root);
-
-let shape4 = elementFactory.createShape({
-    x: 425,
-    y: 50,
-    width: 300,
-    height: 200,
-    isFrame: true
-});
-
-canvas.addShape(shape4, root);
-
-
-// (3) interact with the diagram via API
-
-const selection = diagram.get('selection');
-
-selection.select(shape3);

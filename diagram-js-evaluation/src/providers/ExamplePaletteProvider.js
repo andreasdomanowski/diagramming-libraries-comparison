@@ -1,3 +1,6 @@
+import * as shapeIdentifiers from './../js/shapes/EvaluationShapes'
+
+
 export default function ExamplePaletteProvider(create, elementFactory, lassoTool, palette) {
   this._create = create;
   this._elementFactory = elementFactory;
@@ -31,7 +34,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function() {
             width: 100,
             height: 80
           });
-
+          shape.customShapeIdentifier = shapeIdentifiers.shapeRectangleIdentifier;
           create.start(event, shape);
         }
       }
@@ -47,7 +50,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function() {
             height: 200,
             isFrame: true
           });
-
+          shape.customShapeIdentifier = shapeIdentifiers.shapeCircleIdentifier;
           create.start(event, shape);
         }
       }
@@ -63,7 +66,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function() {
             height: 200,
             isFrame: true
           });
-
+          shape.customShapeIdentifier = shapeIdentifiers.shapeComposedShapeIdentifier;
           create.start(event, shape);
         }
       }
