@@ -16,6 +16,16 @@ import ZoomScrollModule from 'diagram-js/lib/navigation/zoomscroll';
 
 import ProvidersModule from './providers';
 
+import {
+  append as svgAppend,
+  attr as svgAttr,
+  create as svgCreate
+} from 'tiny-svg';
+
+import {
+  isFrameElement
+} from "diagram-js/lib/util/Elements";
+
 /**
  * A module that changes the default diagram look.
  */
@@ -26,6 +36,26 @@ const ElementStyleModule = {
       defaultRenderer.CONNECTION_STYLE = { fill: 'none', strokeWidth: 5, stroke: '#000' };
       defaultRenderer.SHAPE_STYLE = { fill: 'white', stroke: '#000', strokeWidth: 2 };
       defaultRenderer.FRAME_STYLE = { fill: 'none', stroke: '#000', strokeDasharray: 4, strokeWidth: 2 };
+      defaultRenderer.drawShape = function (visuals, element) {
+        let rect = svgCreate('rect');
+
+        svgAttr(rect, {
+          x: 0,
+          y: 0,
+          width: element.width || 0,
+          height: element.height || 0
+        });
+
+        if (isFrameElement(element)) {
+          svgAttr(rect, this.FRAME_STYLE);
+        } else {
+          svgAttr(rect, this.SHAPE_STYLE);
+        }
+
+        svgAppend(visuals, rect);
+
+        return rect;
+      }
     } ]
   ]
 };
