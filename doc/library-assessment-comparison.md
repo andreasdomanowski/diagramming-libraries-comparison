@@ -33,12 +33,13 @@ Disclaimer: all information which was taken into account for the decision for or
 ### Documentation and Examples
 - just one example repository
 - documentation mainly in code, just very patchy top level architecture document in a repo of bpmn.io
-  - usage of DI framework makes getting an initial overview more cumbersome than compared with JointJS
+  - usage of DI framework makes getting an initial overview more cumbersome compared with JointJS
 ### Ease Of Implementing the Requirements
 ### Customizability
 - custom shapes are created easily due to the usage of tiny-svg, a nice toolset for SVG
 ### Implementation Effort for Usability Aspects
 - out of the box palette support, this comes in very handy
+- scrolling and automatic resize handling are definitely pros
 ### Support and Questions
 - barely anything for diagram-js, but an active community around bpmn-js, which is built on top of diagram-js
 ### Miscellaneous aspects
