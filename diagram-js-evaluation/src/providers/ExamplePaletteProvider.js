@@ -1,6 +1,3 @@
-/**
- * A example palette provider.
- */
 export default function ExamplePaletteProvider(create, elementFactory, lassoTool, palette) {
   this._create = create;
   this._elementFactory = elementFactory;
@@ -24,24 +21,10 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function() {
       lassoTool = this._lassoTool;
 
   return {
-    'lasso-tool': {
-      group: 'tools',
-      className: 'palette-icon-lasso-tool',
-      title: 'Activate Lasso Tool',
-      action: {
-        click: function(event) {
-          lassoTool.activateSelection(event);
-        }
-      }
-    },
-    'tool-separator': {
-      group: 'tools',
-      separator: true
-    },
-    'create-shape': {
+    'create-rect': {
       group: 'create',
-      className: 'palette-icon-create-shape',
-      title: 'Create Shape',
+      className: 'palette-icon-create-rectangle',
+      title: 'Create Rectangle',
       action: {
         click: function() {
           var shape = elementFactory.createShape({
@@ -53,10 +36,26 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function() {
         }
       }
     },
-    'create-frame': {
+    'create-circle': {
       group: 'create',
-      className: 'palette-icon-create-frame',
-      title: 'Create Frame',
+      className: 'palette-icon-create-circle',
+      title: 'Create Circle',
+      action: {
+        click: function() {
+          var shape = elementFactory.createShape({
+            width: 300,
+            height: 200,
+            isFrame: true
+          });
+
+          create.start(event, shape);
+        }
+      }
+    },
+    'create-custom-shape':  {
+      group: 'create',
+      className: 'palette-icon-create-custom-shape',
+      title: 'Create Custom Shape',
       action: {
         click: function() {
           var shape = elementFactory.createShape({
