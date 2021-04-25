@@ -16,7 +16,7 @@ ExampleContextPadProvider.$inject = [
 
 
 ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
-  var connect = this._connect,
+  let connect = this._connect,
       modeling = this._modeling;
 
   function removeElement() {
