@@ -14,7 +14,7 @@ import RulesModule from 'diagram-js/lib/features/rules';
 import SelectionModule from 'diagram-js/lib/features/selection';
 import ZoomScrollModule from 'diagram-js/lib/navigation/zoomscroll';
 
-import ProvidersModule from './providers';
+import ProvidersModule from './js/providers';
 
 import {CustomElementStyleModule} from './js/shapes/CustomElementStyleModule'
 

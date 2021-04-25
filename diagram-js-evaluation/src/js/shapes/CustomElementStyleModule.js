@@ -31,6 +31,42 @@ const customRenderer = function (visuals, element) {
     }
 }
 
+function createCircleShape(element, visuals) {
+    let circle = svgCreate('circle');
+    svgAttr(circle, {
+        cx: 0.5 * element.width,
+        cy: 0.5 * element.height,
+        r: 0.5 * element.height,
+        fill: 'none',
+        stroke: 'black',
+        strokeWidth: 3
+    });
+
+    console.log(circle);
+
+    svgAppend(visuals, circle);
+
+    return circle;
+}
+
+function createRectangleShape(element, visuals) {
+    let rect = svgCreate('rect');
+    svgAttr(rect, {
+        x: 0,
+        y: 0,
+        fill: 'none',
+        stroke: 'black',
+        strokeWidth: 3,
+        width: element.width ,
+        height: element.height
+    });
+
+    svgAppend(visuals, rect);
+
+    console.log(rect);
+    return rect;
+}
+
 function createComposedShape(element, visuals) {
     let svgGroup = svgCreate('g');
     let ellipse = svgCreate('ellipse');
@@ -61,40 +97,4 @@ function createComposedShape(element, visuals) {
     svgAppend(visuals, ellipse);
 
     return svgGroup;
-}
-
-function createCircleShape(element, visuals) {
-    let circle = svgCreate('circle');
-    svgAttr(circle, {
-        cx: 0.5 * element.width,
-        cy: 0.5 * element.height,
-        r: 40,
-        fill: 'none',
-        stroke: 'black',
-        strokeWidth: 3
-    });
-
-    console.log(circle);
-
-    svgAppend(visuals, circle);
-
-    return circle;
-}
-
-function createRectangleShape(element, visuals) {
-    let rect = svgCreate('rect');
-    svgAttr(rect, {
-        x: 0,
-        y: 0,
-        fill: 'none',
-        stroke: 'black',
-        strokeWidth: 3,
-        width: element.width || 0,
-        height: element.height || 0
-    });
-
-    svgAppend(visuals, rect);
-
-    console.log(rect);
-    return rect;
 }
