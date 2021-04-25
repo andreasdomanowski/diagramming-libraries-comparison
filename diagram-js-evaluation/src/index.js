@@ -1,10 +1,10 @@
-export { default } from './editor';
+export { default } from './js/editor';
 
 import css from 'diagram-js/assets/diagram-js.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/diagram-js-evaluation.css'
 
-import Editor from './editor'
+import Editor from './js/editor'
 import * as shapeIdentifiers from './js/shapes/EvaluationShapes'
 
 

@@ -34,6 +34,7 @@ Disclaimer: all information which was taken into account for the decision for or
 - just one example repository
 - documentation mainly in code, just very patchy top level architecture document in a repo of bpmn.io
   - usage of DI framework makes getting an initial overview more cumbersome compared with JointJS
+- very modular approach, but no documentation, which modules exist and how they can be used
 ### Ease Of Implementing the Requirements
 ### Customizability
 - custom shapes are created easily due to the usage of tiny-svg, a nice toolset for SVG
