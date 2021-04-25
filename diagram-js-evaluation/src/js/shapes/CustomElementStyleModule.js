@@ -42,8 +42,6 @@ function createCircleShape(element, visuals) {
         strokeWidth: 3
     });
 
-    console.log(circle);
-
     svgAppend(visuals, circle);
 
     return circle;
@@ -63,7 +61,6 @@ function createRectangleShape(element, visuals) {
 
     svgAppend(visuals, rect);
 
-    console.log(rect);
     return rect;
 }
 

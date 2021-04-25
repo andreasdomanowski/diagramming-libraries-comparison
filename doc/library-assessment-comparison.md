@@ -36,6 +36,8 @@ Disclaimer: all information which was taken into account for the decision for or
   - usage of DI framework makes getting an initial overview more cumbersome compared with JointJS
 - very modular approach, but no documentation, which modules exist and how they can be used
 ### Ease Of Implementing the Requirements
+- editor creation not as intuitive as with JointJS
+- serialization was cumbersome, due to DiagramJS not supporting it out of the box
 ### Customizability
 - custom shapes are created easily due to the usage of tiny-svg, a nice toolset for SVG
 ### Implementation Effort for Usability Aspects
