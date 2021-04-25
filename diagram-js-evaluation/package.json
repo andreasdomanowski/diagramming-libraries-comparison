@@ -1,6 +1,30 @@
 {
   "name": "diagram-js-evaluation",
   "version": "1.0.0",
-  "dependencies": {
+  "description": "A small evaluation project for a graph editor based on diagram-js",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andreasdomanowski/diagramming-libraries-comparison",
+    "directory": "diagram-js-evaluation"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^4.6.0",
+    "copy-webpack-plugin": "^5.1.2",
+    "css-loader": "^5.2.4",
+    "diagram-js": "^7.2.3",
+    "html-webpack-plugin": "^5.3.1",
+    "jquery": "^3.6.0",
+    "style-loader": "^2.0.0",
+    "tiny-svg": "^2.2.2",
+    "webpack": "^5.33.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-dev-server": "^3.11.2"
   }
 }

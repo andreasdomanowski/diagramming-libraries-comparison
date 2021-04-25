@@ -7,6 +7,7 @@ Disclaimer: all information which was taken into account for the decision for or
 - customizability
 - implementation effort for usability aspects
 - support and questions
+- miscellaneous aspects
 
 ## JointJS
 ### Initial Effort to Get Started
@@ -28,8 +29,21 @@ Disclaimer: all information which was taken into account for the decision for or
 
 ## Diagram.js
 ### Initial Effort to Get Started
+- relatively hard, due to the lack of documentation, just the example project is given
 ### Documentation and Examples
+- just one example repository
+- documentation mainly in code, just very patchy top level architecture document in a repo of bpmn.io
+  - usage of DI framework makes getting an initial overview more cumbersome compared with JointJS
 ### Ease Of Implementing the Requirements
 ### Customizability
+- custom shapes are created easily due to the usage of tiny-svg, a nice toolset for SVG
 ### Implementation Effort for Usability Aspects
+- out of the box palette support, this comes in very handy
+- scrolling and automatic resize handling are definitely pros
 ### Support and Questions
+- barely anything for diagram-js, but an active community around bpmn-js, which is built on top of diagram-js
+### Miscellaneous aspects
+- [example editor](https://github.com/bpmn-io/diagram-js-examples) provided by maintainers contains bugs that catch the eye
+  - if an element is clicked repeatedly, it gets stuck to the mouse pointer and can't be dropped
+  - moving the predefined connected rectangles results in the link having the highest "z-index". Combined with the anchor being the middle of the rectangle, this definitely catches the eye, too
+  
