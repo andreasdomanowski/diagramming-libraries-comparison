@@ -75,7 +75,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#diagramCanvas {\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n#serializationButtonGroup {\n    margin-top: 20px;\n}", "",{"version":3,"sources":["webpack://./src/css/diagram-js-evaluation.css"],"names":[],"mappings":"AAAA;IACI,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;AACpB","sourcesContent":["#diagramCanvas {\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n#serializationButtonGroup {\n    margin-top: 20px;\n}"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "html,\nbody,\n#canvas,\n#canvas > div {\n    height: 100%;\n    margin: 0;\n}\n\n.palette-icon-create-rectangle {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Crect%20x%3D%2210%22%20y%3D%2213%22%20width%3D%2226%22%20height%3D%2220%22%2F%3E%3C%2Fsvg%3E');\n}\n\n.palette-icon-create-circle {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Ccircle%20cx%3D%2223%22%20cy%3D%2220%22%20r%3D%2213%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E');\n}\n\n.palette-icon-create-custom-shape {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%0A%3Cg%3E%0A%3Crect%20x%3D%2210%22%20y%3D%2213%22%20width%3D%2226%22%20height%3D%2220%22%2F%3E%0A%3Cellipse%20cx%3D%2223%22%20cy%3D%2223%22%20rx%3D%2213%22%20ry%3D%2210%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E');\n}\n\n.context-pad-icon-remove {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Cline%20x1%3D%225%22%20y1%3D%225%22%20x2%3D%2215%22%20y2%3D%2215%22%2F%3E%3Cline%20x1%3D%2215%22%20y1%3D%225%22%20x2%3D%225%22%20y2%3D%2215%22%2F%3E%3C%2Fsvg%3E') !important;\n}\n\n.context-pad-icon-connect {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Cline%20x1%3D%2215%22%20y1%3D%225%22%20x2%3D%225%22%20y2%3D%2215%22%2F%3E%3C%2Fsvg%3E') !important;\n}\n\n#diagramCanvas {\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n#serializationButtonGroup {\n    margin-top: 20px;\n}", "",{"version":3,"sources":["webpack://./src/css/diagram-js-evaluation.css"],"names":[],"mappings":"AAAA;;;;IAII,YAAY;IACZ,SAAS;AACb;;AAEA;IACI,gTAAgT;AACpT;;AAEA;IACI,kWAAkW;AACtW;;AAEA;IACI,gaAAga;AACpa;;AAEA;IACI,+XAA+X;AACnY;;AAEA;IACI,oTAAoT;AACxT;;AAEA;IACI,gBAAgB;IAChB,mBAAmB;AACvB;;AAEA;IACI,gBAAgB;AACpB","sourcesContent":["html,\nbody,\n#canvas,\n#canvas > div {\n    height: 100%;\n    margin: 0;\n}\n\n.palette-icon-create-rectangle {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Crect%20x%3D%2210%22%20y%3D%2213%22%20width%3D%2226%22%20height%3D%2220%22%2F%3E%3C%2Fsvg%3E');\n}\n\n.palette-icon-create-circle {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Ccircle%20cx%3D%2223%22%20cy%3D%2220%22%20r%3D%2213%22%20stroke%3D%22black%22%20stroke-width%3D%221.5%22%20fill%3D%22none%22%2F%3E%3C%2Fsvg%3E');\n}\n\n.palette-icon-create-custom-shape {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%0A%3Cg%3E%0A%3Crect%20x%3D%2210%22%20y%3D%2213%22%20width%3D%2226%22%20height%3D%2220%22%2F%3E%0A%3Cellipse%20cx%3D%2223%22%20cy%3D%2223%22%20rx%3D%2213%22%20ry%3D%2210%22%2F%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E');\n}\n\n.context-pad-icon-remove {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Cline%20x1%3D%225%22%20y1%3D%225%22%20x2%3D%2215%22%20y2%3D%2215%22%2F%3E%3Cline%20x1%3D%2215%22%20y1%3D%225%22%20x2%3D%225%22%20y2%3D%2215%22%2F%3E%3C%2Fsvg%3E') !important;\n}\n\n.context-pad-icon-connect {\n    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.5%22%20width%3D%2246%22%20height%3D%2246%22%3E%3Cline%20x1%3D%2215%22%20y1%3D%225%22%20x2%3D%225%22%20y2%3D%2215%22%2F%3E%3C%2Fsvg%3E') !important;\n}\n\n#diagramCanvas {\n    margin-top: 20px;\n    margin-bottom: 20px;\n}\n\n#serializationButtonGroup {\n    margin-top: 20px;\n}"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -20114,21 +20114,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ Editor)
 /* harmony export */ });
-/* harmony import */ var diagram_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! diagram-js */ "./node_modules/diagram-js/lib/Diagram.js");
-/* harmony import */ var diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! diagram-js/lib/features/connect */ "./node_modules/diagram-js/lib/features/connect/index.js");
-/* harmony import */ var diagram_js_lib_features_context_pad__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! diagram-js/lib/features/context-pad */ "./node_modules/diagram-js/lib/features/context-pad/index.js");
-/* harmony import */ var diagram_js_lib_features_create__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! diagram-js/lib/features/create */ "./node_modules/diagram-js/lib/features/create/index.js");
-/* harmony import */ var diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! diagram-js/lib/features/lasso-tool */ "./node_modules/diagram-js/lib/features/lasso-tool/index.js");
-/* harmony import */ var diagram_js_lib_features_modeling__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! diagram-js/lib/features/modeling */ "./node_modules/diagram-js/lib/features/modeling/index.js");
-/* harmony import */ var diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! diagram-js/lib/navigation/movecanvas */ "./node_modules/diagram-js/lib/navigation/movecanvas/index.js");
-/* harmony import */ var diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! diagram-js/lib/features/move */ "./node_modules/diagram-js/lib/features/move/index.js");
-/* harmony import */ var diagram_js_lib_features_outline__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! diagram-js/lib/features/outline */ "./node_modules/diagram-js/lib/features/outline/index.js");
-/* harmony import */ var diagram_js_lib_features_palette__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! diagram-js/lib/features/palette */ "./node_modules/diagram-js/lib/features/palette/index.js");
-/* harmony import */ var diagram_js_lib_features_resize__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! diagram-js/lib/features/resize */ "./node_modules/diagram-js/lib/features/resize/index.js");
-/* harmony import */ var diagram_js_lib_features_rules__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! diagram-js/lib/features/rules */ "./node_modules/diagram-js/lib/features/rules/index.js");
-/* harmony import */ var diagram_js_lib_features_selection__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! diagram-js/lib/features/selection */ "./node_modules/diagram-js/lib/features/selection/index.js");
-/* harmony import */ var diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! diagram-js/lib/navigation/zoomscroll */ "./node_modules/diagram-js/lib/navigation/zoomscroll/index.js");
-/* harmony import */ var _providers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./providers */ "./src/providers/index.js");
+/* harmony import */ var diagram_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! diagram-js */ "./node_modules/diagram-js/lib/Diagram.js");
+/* harmony import */ var diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! diagram-js/lib/features/connect */ "./node_modules/diagram-js/lib/features/connect/index.js");
+/* harmony import */ var diagram_js_lib_features_context_pad__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! diagram-js/lib/features/context-pad */ "./node_modules/diagram-js/lib/features/context-pad/index.js");
+/* harmony import */ var diagram_js_lib_features_create__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! diagram-js/lib/features/create */ "./node_modules/diagram-js/lib/features/create/index.js");
+/* harmony import */ var diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! diagram-js/lib/features/lasso-tool */ "./node_modules/diagram-js/lib/features/lasso-tool/index.js");
+/* harmony import */ var diagram_js_lib_features_modeling__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! diagram-js/lib/features/modeling */ "./node_modules/diagram-js/lib/features/modeling/index.js");
+/* harmony import */ var diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! diagram-js/lib/navigation/movecanvas */ "./node_modules/diagram-js/lib/navigation/movecanvas/index.js");
+/* harmony import */ var diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! diagram-js/lib/features/move */ "./node_modules/diagram-js/lib/features/move/index.js");
+/* harmony import */ var diagram_js_lib_features_outline__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! diagram-js/lib/features/outline */ "./node_modules/diagram-js/lib/features/outline/index.js");
+/* harmony import */ var diagram_js_lib_features_palette__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! diagram-js/lib/features/palette */ "./node_modules/diagram-js/lib/features/palette/index.js");
+/* harmony import */ var diagram_js_lib_features_resize__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! diagram-js/lib/features/resize */ "./node_modules/diagram-js/lib/features/resize/index.js");
+/* harmony import */ var diagram_js_lib_features_rules__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! diagram-js/lib/features/rules */ "./node_modules/diagram-js/lib/features/rules/index.js");
+/* harmony import */ var diagram_js_lib_features_selection__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! diagram-js/lib/features/selection */ "./node_modules/diagram-js/lib/features/selection/index.js");
+/* harmony import */ var diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! diagram-js/lib/navigation/zoomscroll */ "./node_modules/diagram-js/lib/navigation/zoomscroll/index.js");
+/* harmony import */ var _js_providers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/providers */ "./src/js/providers/index.js");
+/* harmony import */ var _js_shapes_CustomElementStyleModule__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/shapes/CustomElementStyleModule */ "./src/js/shapes/CustomElementStyleModule.js");
 
 
 
@@ -20147,19 +20148,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/**
- * A module that changes the default diagram look.
- */
-const ElementStyleModule = {
-  __init__: [
-    [ 'defaultRenderer', function(defaultRenderer) {
-      // override default styles
-      defaultRenderer.CONNECTION_STYLE = { fill: 'none', strokeWidth: 5, stroke: '#000' };
-      defaultRenderer.SHAPE_STYLE = { fill: 'white', stroke: '#000', strokeWidth: 2 };
-      defaultRenderer.FRAME_STYLE = { fill: 'none', stroke: '#000', strokeDasharray: 4, strokeWidth: 2 };
-    } ]
-  ]
-};
+
+
+
 
 
 /**
@@ -20178,28 +20169,28 @@ function Editor(options) {
 
   // default modules provided by the toolbox
   const builtinModules = [
-    diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_1__.default,
-    diagram_js_lib_features_context_pad__WEBPACK_IMPORTED_MODULE_2__.default,
-    diagram_js_lib_features_create__WEBPACK_IMPORTED_MODULE_3__.default,
-    diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_4__.default,
-    diagram_js_lib_features_modeling__WEBPACK_IMPORTED_MODULE_5__.default,
-    diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_6__.default,
-    diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_7__.default,
-    diagram_js_lib_features_outline__WEBPACK_IMPORTED_MODULE_8__.default,
-    diagram_js_lib_features_palette__WEBPACK_IMPORTED_MODULE_9__.default,
-    diagram_js_lib_features_resize__WEBPACK_IMPORTED_MODULE_10__.default,
-    diagram_js_lib_features_rules__WEBPACK_IMPORTED_MODULE_11__.default,
-    diagram_js_lib_features_selection__WEBPACK_IMPORTED_MODULE_12__.default,
-    diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_13__.default
+    diagram_js_lib_features_connect__WEBPACK_IMPORTED_MODULE_2__.default,
+    diagram_js_lib_features_context_pad__WEBPACK_IMPORTED_MODULE_3__.default,
+    diagram_js_lib_features_create__WEBPACK_IMPORTED_MODULE_4__.default,
+    diagram_js_lib_features_lasso_tool__WEBPACK_IMPORTED_MODULE_5__.default,
+    diagram_js_lib_features_modeling__WEBPACK_IMPORTED_MODULE_6__.default,
+    diagram_js_lib_navigation_movecanvas__WEBPACK_IMPORTED_MODULE_7__.default,
+    diagram_js_lib_features_move__WEBPACK_IMPORTED_MODULE_8__.default,
+    diagram_js_lib_features_outline__WEBPACK_IMPORTED_MODULE_9__.default,
+    diagram_js_lib_features_palette__WEBPACK_IMPORTED_MODULE_10__.default,
+    diagram_js_lib_features_resize__WEBPACK_IMPORTED_MODULE_11__.default,
+    diagram_js_lib_features_rules__WEBPACK_IMPORTED_MODULE_12__.default,
+    diagram_js_lib_features_selection__WEBPACK_IMPORTED_MODULE_13__.default,
+    diagram_js_lib_navigation_zoomscroll__WEBPACK_IMPORTED_MODULE_14__.default
   ];
 
   // our own modules, contributing controls, customizations, and more
   const customModules = [
-    _providers__WEBPACK_IMPORTED_MODULE_0__.default,
-    ElementStyleModule
+    _js_providers__WEBPACK_IMPORTED_MODULE_0__.default,
+    _js_shapes_CustomElementStyleModule__WEBPACK_IMPORTED_MODULE_1__.CustomElementStyleModule
   ];
 
-  return new diagram_js__WEBPACK_IMPORTED_MODULE_14__.default({
+  return new diagram_js__WEBPACK_IMPORTED_MODULE_15__.default({
     canvas: {
       container
     },
@@ -20213,10 +20204,10 @@ function Editor(options) {
 
 /***/ }),
 
-/***/ "./src/providers/ExampleContextPadProvider.js":
-/*!****************************************************!*\
-  !*** ./src/providers/ExampleContextPadProvider.js ***!
-  \****************************************************/
+/***/ "./src/js/providers/ExampleContextPadProvider.js":
+/*!*******************************************************!*\
+  !*** ./src/js/providers/ExampleContextPadProvider.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -20242,7 +20233,7 @@ ExampleContextPadProvider.$inject = [
 
 
 ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
-  var connect = this._connect,
+  let connect = this._connect,
       modeling = this._modeling;
 
   function removeElement() {
@@ -20277,10 +20268,10 @@ ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
 
 /***/ }),
 
-/***/ "./src/providers/ExamplePaletteProvider.js":
-/*!*************************************************!*\
-  !*** ./src/providers/ExamplePaletteProvider.js ***!
-  \*************************************************/
+/***/ "./src/js/providers/ExamplePaletteProvider.js":
+/*!****************************************************!*\
+  !*** ./src/js/providers/ExamplePaletteProvider.js ***!
+  \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -20288,86 +20279,88 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ ExamplePaletteProvider)
 /* harmony export */ });
-/**
- * A example palette provider.
- */
-function ExamplePaletteProvider(create, elementFactory, lassoTool, palette) {
-  this._create = create;
-  this._elementFactory = elementFactory;
-  this._lassoTool = lassoTool;
-  this._palette = palette;
+/* harmony import */ var _shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../shapes/EvaluationShapes */ "./src/js/shapes/EvaluationShapes.js");
 
-  palette.registerProvider(this);
+
+
+function ExamplePaletteProvider(create, elementFactory, lassoTool, palette) {
+    this._create = create;
+    this._elementFactory = elementFactory;
+    this._lassoTool = lassoTool;
+    this._palette = palette;
+
+    palette.registerProvider(this);
 }
 
 ExamplePaletteProvider.$inject = [
-  'create',
-  'elementFactory',
-  'lassoTool',
-  'palette'
+    'create',
+    'elementFactory',
+    'lassoTool',
+    'palette'
 ];
 
 
-ExamplePaletteProvider.prototype.getPaletteEntries = function() {
-  var create = this._create,
-      elementFactory = this._elementFactory,
-      lassoTool = this._lassoTool;
-
-  return {
-    'lasso-tool': {
-      group: 'tools',
-      className: 'palette-icon-lasso-tool',
-      title: 'Activate Lasso Tool',
-      action: {
-        click: function(event) {
-          lassoTool.activateSelection(event);
+ExamplePaletteProvider.prototype.getPaletteEntries = function () {
+    const create = this._create;
+    const elementFactory = this._elementFactory
+    return {
+        'create-rect': {
+            group: 'create',
+            className: 'palette-icon-create-rectangle',
+            title: 'Create Rectangle',
+            action: {
+                click: function () {
+                    const shape = elementFactory.createShape({
+                        width: 120,
+                        height: 80,
+                        isFrame: true
+                    });
+                    shape.customShapeIdentifier = _shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__.shapeRectangleIdentifier;
+                    create.start(event, shape);
+                }
+            }
+        },
+        'create-circle': {
+            group: 'create',
+            className: 'palette-icon-create-circle',
+            title: 'Create Circle',
+            action: {
+                click: function () {
+                    const shape = elementFactory.createShape({
+                        width: 120,
+                        height: 120,
+                        isFrame: true
+                    });
+                    shape.customShapeIdentifier = _shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__.shapeCircleIdentifier;
+                    create.start(event, shape);
+                }
+            }
+        },
+        'create-custom-shape': {
+            group: 'create',
+            className: 'palette-icon-create-custom-shape',
+            title: 'Create Custom Shape',
+            action: {
+                click: function () {
+                    const shape = elementFactory.createShape({
+                        width: 120,
+                        height: 80,
+                        isFrame: true
+                    });
+                    shape.customShapeIdentifier = _shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__.shapeComposedShapeIdentifier;
+                    create.start(event, shape);
+                }
+            }
         }
-      }
-    },
-    'tool-separator': {
-      group: 'tools',
-      separator: true
-    },
-    'create-shape': {
-      group: 'create',
-      className: 'palette-icon-create-shape',
-      title: 'Create Shape',
-      action: {
-        click: function() {
-          var shape = elementFactory.createShape({
-            width: 100,
-            height: 80
-          });
-
-          create.start(event, shape);
-        }
-      }
-    },
-    'create-frame': {
-      group: 'create',
-      className: 'palette-icon-create-frame',
-      title: 'Create Frame',
-      action: {
-        click: function() {
-          var shape = elementFactory.createShape({
-            width: 300,
-            height: 200,
-            isFrame: true
-          });
-
-          create.start(event, shape);
-        }
-      }
-    }
-  };
+    };
 };
 
 /***/ }),
 
-/***/ "./src/providers/ExampleRuleProvider.js":
-/*!**********************************************!*\
-  !*** ./src/providers/ExampleRuleProvider.js ***!
-  \**********************************************/
+/***/ "./src/js/providers/ExampleRuleProvider.js":
+/*!*************************************************!*\
+  !*** ./src/js/providers/ExampleRuleProvider.js ***!
+  \*************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -20397,21 +20390,21 @@ inherits__WEBPACK_IMPORTED_MODULE_0___default()(ExampleRuleProvider, diagram_js_
 
 ExampleRuleProvider.prototype.init = function() {
   this.addRule('shape.create', function(context) {
-    var target = context.target,
+    let target = context.target,
         shape = context.shape;
 
     return target.parent === shape.target;
   });
 
   this.addRule('connection.create', function(context) {
-    var source = context.source,
+    let source = context.source,
         target = context.target;
 
     return source.parent === target.parent;
   });
 
   this.addRule('shape.resize', function(context) {
-    var shape = context.shape;
+    let shape = context.shape;
 
     return (0,diagram_js_lib_util_Elements__WEBPACK_IMPORTED_MODULE_2__.isFrameElement)(shape);
   });
@@ -20419,10 +20412,10 @@ ExampleRuleProvider.prototype.init = function() {
 
 /***/ }),
 
-/***/ "./src/providers/index.js":
-/*!********************************!*\
-  !*** ./src/providers/index.js ***!
-  \********************************/
+/***/ "./src/js/providers/index.js":
+/*!***********************************!*\
+  !*** ./src/js/providers/index.js ***!
+  \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -20430,9 +20423,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _ExampleContextPadProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleContextPadProvider */ "./src/providers/ExampleContextPadProvider.js");
-/* harmony import */ var _ExamplePaletteProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExamplePaletteProvider */ "./src/providers/ExamplePaletteProvider.js");
-/* harmony import */ var _ExampleRuleProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExampleRuleProvider */ "./src/providers/ExampleRuleProvider.js");
+/* harmony import */ var _ExampleContextPadProvider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ExampleContextPadProvider */ "./src/js/providers/ExampleContextPadProvider.js");
+/* harmony import */ var _ExamplePaletteProvider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ExamplePaletteProvider */ "./src/js/providers/ExamplePaletteProvider.js");
+/* harmony import */ var _ExampleRuleProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ExampleRuleProvider */ "./src/js/providers/ExampleRuleProvider.js");
 
 
 
@@ -20447,6 +20440,141 @@ __webpack_require__.r(__webpack_exports__);
   examplePaletteProvider: [ 'type', _ExamplePaletteProvider__WEBPACK_IMPORTED_MODULE_1__.default ],
   exampleRuleProvider: [ 'type', _ExampleRuleProvider__WEBPACK_IMPORTED_MODULE_2__.default ]
 });
+
+/***/ }),
+
+/***/ "./src/js/shapes/CustomElementStyleModule.js":
+/*!***************************************************!*\
+  !*** ./src/js/shapes/CustomElementStyleModule.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CustomElementStyleModule": () => (/* binding */ CustomElementStyleModule)
+/* harmony export */ });
+/* harmony import */ var tiny_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tiny-svg */ "./node_modules/tiny-svg/dist/index.esm.js");
+/* harmony import */ var _EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./EvaluationShapes */ "./src/js/shapes/EvaluationShapes.js");
+
+
+
+const CustomElementStyleModule = {
+    __init__: [
+        [ 'defaultRenderer', function(defaultRenderer) {
+            // override default styles
+            defaultRenderer.CONNECTION_STYLE = { fill: 'none', strokeWidth: 5, stroke: '#000' };
+            defaultRenderer.SHAPE_STYLE = { fill: 'white', stroke: '#000', strokeWidth: 2 };
+            defaultRenderer.FRAME_STYLE = { fill: 'none', stroke: '#000', strokeDasharray: 4, strokeWidth: 2 };
+            defaultRenderer.drawShape = customRenderer;
+        } ]
+    ]
+};
+
+/**
+ * Override default look and feel of example
+ */
+
+const customRenderer = function (visuals, element) {
+    if(element.customShapeIdentifier === _EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__.shapeRectangleIdentifier){
+        return createRectangleShape(element, visuals);
+    }
+
+    if(element.customShapeIdentifier === _EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__.shapeCircleIdentifier){
+        return createCircleShape(element, visuals);
+    }
+
+    if(element.customShapeIdentifier === _EvaluationShapes__WEBPACK_IMPORTED_MODULE_0__.shapeComposedShapeIdentifier){
+        return createComposedShape(element, visuals);
+    }
+}
+
+function createCircleShape(element, visuals) {
+    let circle = (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.create)('circle');
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.attr)(circle, {
+        cx: 0.5 * element.width,
+        cy: 0.5 * element.height,
+        r: 0.5 * element.height,
+        fill: 'none',
+        stroke: 'black',
+        strokeWidth: 3
+    });
+
+    console.log(circle);
+
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.append)(visuals, circle);
+
+    return circle;
+}
+
+function createRectangleShape(element, visuals) {
+    let rect = (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.create)('rect');
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.attr)(rect, {
+        x: 0,
+        y: 0,
+        fill: 'none',
+        stroke: 'black',
+        strokeWidth: 3,
+        width: element.width ,
+        height: element.height
+    });
+
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.append)(visuals, rect);
+
+    console.log(rect);
+    return rect;
+}
+
+function createComposedShape(element, visuals) {
+    let svgGroup = (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.create)('g');
+    let ellipse = (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.create)('ellipse');
+
+    let rect = (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.create)('rect');
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.attr)(rect, {
+        x: 0,
+        y: 0,
+        fill: 'none',
+        stroke: 'black',
+        strokeWidth: 3,
+        width: element.width || 0,
+        height: element.height || 0
+    });
+
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.attr)(ellipse, {
+        cx: 0.5 * element.width,
+        cy: 0.5 * element.height,
+        rx: 0.5 * element.width,
+        ry: 0.5 * element.height,
+        fill: 'none',
+        stroke: 'black',
+        strokeWidth: 3
+    });
+
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.append)(visuals, svgGroup);
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.append)(visuals, rect);
+    (0,tiny_svg__WEBPACK_IMPORTED_MODULE_1__.append)(visuals, ellipse);
+
+    return svgGroup;
+}
+
+/***/ }),
+
+/***/ "./src/js/shapes/EvaluationShapes.js":
+/*!*******************************************!*\
+  !*** ./src/js/shapes/EvaluationShapes.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "shapeRectangleIdentifier": () => (/* binding */ shapeRectangleIdentifier),
+/* harmony export */   "shapeCircleIdentifier": () => (/* binding */ shapeCircleIdentifier),
+/* harmony export */   "shapeComposedShapeIdentifier": () => (/* binding */ shapeComposedShapeIdentifier)
+/* harmony export */ });
+const shapeRectangleIdentifier = "example.rectangle";
+const shapeCircleIdentifier = "example.circle";
+const shapeComposedShapeIdentifier = "example.composedShape";
 
 /***/ })
 
@@ -20533,6 +20661,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var diagram_js_assets_diagram_js_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! diagram-js/assets/diagram-js.css */ "./node_modules/diagram-js/assets/diagram-js.css");
 /* harmony import */ var bootstrap_dist_css_bootstrap_min_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! bootstrap/dist/css/bootstrap.min.css */ "./node_modules/bootstrap/dist/css/bootstrap.min.css");
 /* harmony import */ var _css_diagram_js_evaluation_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./css/diagram-js-evaluation.css */ "./src/css/diagram-js-evaluation.css");
+/* harmony import */ var _js_shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./js/shapes/EvaluationShapes */ "./src/js/shapes/EvaluationShapes.js");
+
 
 
 
@@ -20559,8 +20689,10 @@ let shape1 = elementFactory.createShape({
     x: 150,
     y: 100,
     width: 100,
-    height: 80
+    height: 80,
+    isFrame: true
 });
+shape1.customShapeIdentifier = _js_shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_4__.shapeRectangleIdentifier;
 
 canvas.addShape(shape1, root);
 
@@ -20568,9 +20700,10 @@ let shape2 = elementFactory.createShape({
     x: 290,
     y: 220,
     width: 100,
-    height: 80
+    height: 80,
+    isFrame: true
 });
-
+shape2.customShapeIdentifier = _js_shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_4__.shapeCircleIdentifier;
 canvas.addShape(shape2, root);
 
 
@@ -20590,27 +20723,12 @@ let shape3 = elementFactory.createShape({
     x: 450,
     y: 80,
     width: 100,
-    height: 80
-});
-
-canvas.addShape(shape3, root);
-
-let shape4 = elementFactory.createShape({
-    x: 425,
-    y: 50,
-    width: 300,
-    height: 200,
+    height: 80,
     isFrame: true
 });
+shape3.customShapeIdentifier = _js_shapes_EvaluationShapes__WEBPACK_IMPORTED_MODULE_4__.shapeComposedShapeIdentifier;
 
-canvas.addShape(shape4, root);
-
-
-// (3) interact with the diagram via API
-
-const selection = diagram.get('selection');
-
-selection.select(shape3);
+canvas.addShape(shape3, root);
 })();
 
 /******/ })()
