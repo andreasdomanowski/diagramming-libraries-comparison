@@ -21,3 +21,15 @@ jobs:
           branch: gh-pages
           folder: joint-js-evaluation/dist
           target-folder: joint-js-evaluation
+
+      - name: Install and Build diagram-js-evaluation
+        run: |
+          cd diagram-js-evaluation
+          npm install
+          npm run build
+      - name: Deploy diagram-js-evaluation
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: diagram-js-evaluation/dist
+          target-folder: diagram-js-evaluation
