@@ -34,3 +34,7 @@ body,
 #serializationButtonGroup {
     margin-top: 20px;
 }
+
+#modalSerializationContent {
+    width: 100%;
+}
