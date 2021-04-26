@@ -25,7 +25,8 @@ let shape1 = elementFactory.createShape({
     y: 100,
     width: 100,
     height: 80,
-    isFrame: true
+    isFrame: true,
+    customLabel: 'Label1'
 });
 shape1.customShapeIdentifier = shapeIdentifiers.shapeRectangleIdentifier;
 
@@ -36,7 +37,8 @@ let shape2 = elementFactory.createShape({
     y: 220,
     width: 100,
     height: 80,
-    isFrame: true
+    isFrame: true,
+    customLabel: 'Label2'
 });
 shape2.customShapeIdentifier = shapeIdentifiers.shapeCircleIdentifier;
 canvas.addShape(shape2, root);
@@ -59,7 +61,8 @@ let shape3 = elementFactory.createShape({
     y: 80,
     width: 100,
     height: 80,
-    isFrame: true
+    isFrame: true,
+    customLabel: 'Label3'
 });
 shape3.customShapeIdentifier = shapeIdentifiers.shapeComposedShapeIdentifier;
 
