@@ -1,11 +1,8 @@
 import * as dom_identifier from "./const/dom-identifier";
 import * as $ from "jquery";
 import 'bootstrap'
-import {canvas, diagram, elementFactory, initAndGetEmptyRoot, root} from './editorInitialization'
-import * as shapeIdentifiers from "./shapes/EvaluationShapes";
-import {Connection, Shape} from "diagram-js/lib/model";
-
-let x = undefined;
+import {canvas, diagram, elementFactory, initAndGetEmptyRoot} from './editorInitialization'
+import {Connection} from "diagram-js/lib/model";
 
 $("#" + dom_identifier.serializeConsoleButton).click(() => {
     console.log(diagram);
@@ -41,13 +38,12 @@ function parseInputAndDisplayGraph(inputString) {
 
     let root = initAndGetEmptyRoot();
 
-    // generate shapes
-    parsedJson.forEach(e => {
-        console.log(e);
-    })
+    let idShapeMap = new Map();
+    let connectionSet = new Set();
 
-    // generate connections
+    //generate shapes
     parsedJson.forEach(e => {
+        // just deserialize non-root shapes which are no connections
         if (!e.hasOwnProperty("waypoints") && e.hasOwnProperty("customShapeIdentifier")) {
             let newShape = elementFactory.createShape({
                 x: e.x,
@@ -57,9 +53,28 @@ function parseInputAndDisplayGraph(inputString) {
                 isFrame: e.isFrame
             });
             newShape.customShapeIdentifier = e.customShapeIdentifier;
+
+            idShapeMap.set(e.id, newShape);
+
             canvas.addShape(newShape, root);
+        } else if (e.hasOwnProperty("waypoints")) {
+            connectionSet.add(
+                {
+                    from: e.from,
+                    to: e.to,
+                    waypoints: e.waypoints
+                });
         }
+
     })
 
+    connectionSet.forEach(element => {
+        let connection = elementFactory.createConnection({
+            waypoints: element.waypoints,
+            source: idShapeMap.get(element.from),
+            target: idShapeMap.get(element.to)
+        });
 
+        canvas.addConnection(connection, root);
+    })
 }
