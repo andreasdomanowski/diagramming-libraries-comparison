@@ -1,3 +1,7 @@
+import * as domIdentifier from './../const/dom-identifier'
+import * as $ from "jquery";
+import * as dom_identifier from "../../../../joint-js-evaluation/src/js/const/dom-identifier";
+
 /**
  * A example context pad provider.
  */
@@ -28,8 +32,16 @@ ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
   }
 
   function editLabel(event, element, autoActivate) {
-    element.customLabel = 'changed';
-    modeling._eventBus.fire('element.changed', { element: element });
+    showEditPropertiesModal();
+
+    let inputField = $("#"+dom_identifier.modalEditPropertyContent);
+    inputField.val(element.customLabel);
+    // if this was not a proof of concept, listener should be removed again
+    inputField.on("change", function (){
+      element.customLabel = inputField.val();
+      modeling._eventBus.fire('element.changed', { element: element });
+    });
+
   }
 
   return {
@@ -62,3 +74,7 @@ ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
     }
   };
 };
+
+function showEditPropertiesModal() {
+  $("#" + domIdentifier.modalEditPropertyIdentifier).modal();
+}
