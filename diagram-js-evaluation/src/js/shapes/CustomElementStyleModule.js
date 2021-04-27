@@ -47,8 +47,8 @@ function createCircleShape(element, visuals) {
 
     let text = svgCreate('text');
     svgAttr(text, {
-        dx: 0.5 * element.width,
-        dy: 0.5 * element.height,
+        x: '0',
+        y: '-10'
     });
 
     // function signature in typing incorrect, seems to work this way.
@@ -75,8 +75,8 @@ function createRectangleShape(element, visuals) {
 
     let text = svgCreate('text');
     svgAttr(text, {
-        dx: 0.5 * element.width,
-        dy: 0.5 * element.height,
+        x: '0',
+        y: '-10'
     });
 
     svgAppend(text, document.createTextNode(element.customLabel));
@@ -114,8 +114,8 @@ function createComposedShape(element, visuals) {
 
     let text = svgCreate('text');
     svgAttr(text, {
-        dx: 0.5 * element.width,
-        dy: 0.5 * element.height,
+        x: '0',
+        y: '-10'
     });
 
     svgAppend(text, document.createTextNode(element.customLabel));
