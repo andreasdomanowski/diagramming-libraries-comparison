@@ -27,6 +27,11 @@ ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
     connect.start(event, element, autoActivate);
   }
 
+  function editLabel(event, element, autoActivate) {
+    element.customLabel = 'changed';
+    modeling._eventBus.fire('element.changed', { element: element });
+  }
+
   return {
     'delete': {
       group: 'edit',
@@ -44,6 +49,15 @@ ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
       action: {
         click: startConnect,
         dragstart: startConnect
+      }
+    },
+    'editLabel':{
+      group: 'edit',
+      className: 'context-pad-icon-edit',
+      title: 'Edit',
+      action: {
+        click: editLabel,
+        dragstart: editLabel
       }
     }
   };

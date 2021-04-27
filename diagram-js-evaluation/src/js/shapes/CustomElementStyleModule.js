@@ -106,7 +106,5 @@ function createComposedShape(element, visuals) {
     svgAppend(visuals, rect);
     svgAppend(visuals, ellipse);
 
-
-
     return svgGroup;
 }
