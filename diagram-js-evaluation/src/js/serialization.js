@@ -52,7 +52,9 @@ function parseInputAndDisplayGraph(inputString) {
                 height: e.height,
                 isFrame: e.isFrame
             });
+
             newShape.customShapeIdentifier = e.customShapeIdentifier;
+            newShape.customLabel = e.customLabel;
 
             idShapeMap.set(e.id, newShape);
 

@@ -45,7 +45,15 @@ function createCircleShape(element, visuals) {
         strokeWidth: 3
     });
 
-    let text = textUtil.createText(element.customLabel, {});
+    let text = svgCreate('text');
+    svgAttr(text, {
+        dx: 0.5 * element.width,
+        dy: 0.5 * element.height,
+    });
+
+    // function signature in typing incorrect, seems to work this way.
+    // see https://github.com/bpmn-io/bpmn-js-example-custom-elements
+    svgAppend(text, document.createTextNode(element.customLabel));
 
     svgAppend(visuals, circle);
     svgAppend(visuals, text);
@@ -65,7 +73,13 @@ function createRectangleShape(element, visuals) {
         height: element.height
     });
 
-    let text = textUtil.createText(element.customLabel, {});
+    let text = svgCreate('text');
+    svgAttr(text, {
+        dx: 0.5 * element.width,
+        dy: 0.5 * element.height,
+    });
+
+    svgAppend(text, document.createTextNode(element.customLabel));
 
     svgAppend(visuals, rect);
     svgAppend(visuals, text);
@@ -98,7 +112,13 @@ function createComposedShape(element, visuals) {
         strokeWidth: 3
     });
 
-    let text = textUtil.createText(element.customLabel, {});
+    let text = svgCreate('text');
+    svgAttr(text, {
+        dx: 0.5 * element.width,
+        dy: 0.5 * element.height,
+    });
+
+    svgAppend(text, document.createTextNode(element.customLabel));
 
     svgAppend(visuals, text);
 
