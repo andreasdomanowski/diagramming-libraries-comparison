@@ -8,6 +8,7 @@ Disclaimer: all information which was taken into account for the decision for or
 - implementation effort for usability aspects
 - support and questions
 - miscellaneous aspects
+- problems
 
 ## JointJS
 ### Initial Effort to Get Started
@@ -49,4 +50,7 @@ Disclaimer: all information which was taken into account for the decision for or
 - [example editor](https://github.com/bpmn-io/diagram-js-examples) provided by maintainers contains bugs that catch the eye
   - if an element is clicked repeatedly, it gets stuck to the mouse pointer and can't be dropped
   - moving the predefined connected rectangles results in the link having the highest "z-index". Combined with the anchor being the middle of the rectangle, this definitely catches the eye, too
-  
+### Problems
+- things initially thought to be included like label rendering is not supported out of the box
+  - therefore hurdle to implement basic requirements
+  - though there are nice implementations of e.g. a [direct label editor](https://github.com/bpmn-io/diagram-js-direct-editing), a custom text renderer has to be implemented
