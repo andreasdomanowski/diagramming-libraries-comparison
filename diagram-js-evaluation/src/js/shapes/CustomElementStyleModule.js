@@ -1,6 +1,5 @@
-import {append, append as svgAppend, appendTo, attr as svgAttr, create, create as svgCreate} from "tiny-svg";
+import {append as svgAppend, attr as svgAttr, create as svgCreate} from "tiny-svg";
 import * as shapeIdentifiers from './EvaluationShapes'
-import TextUtil from 'diagram-js/lib/util/Text';
 
 export const CustomElementStyleModule = {
     __init__: [
@@ -13,9 +12,6 @@ export const CustomElementStyleModule = {
         }]
     ]
 };
-
-const textUtil = new TextUtil({
-});
 
 /**
  * Override default look and feel of example
