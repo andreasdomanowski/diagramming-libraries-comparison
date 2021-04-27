@@ -40,7 +40,7 @@ let shape2 = elementFactory.createShape({
     isFrame: true,
     customLabel: 'Label2'
 });
-shape2.customShapeIdentifier = shapeIdentifiers.shapeCircleIdentifier;
+shape2.customShapeIdentifier = shapeIdentifiers.shapeComposedShapeIdentifier;
 canvas.addShape(shape2, root);
 
 
@@ -64,7 +64,7 @@ let shape3 = elementFactory.createShape({
     isFrame: true,
     customLabel: 'Label3'
 });
-shape3.customShapeIdentifier = shapeIdentifiers.shapeComposedShapeIdentifier;
+shape3.customShapeIdentifier = shapeIdentifiers.shapeCircleIdentifier;
 
 canvas.addShape(shape3, root);
 
