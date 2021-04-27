@@ -29,10 +29,11 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
             action: {
                 click: function () {
                     const shape = elementFactory.createShape({
-                        width: 120,
+                        width: 100,
                         height: 80,
                         isFrame: true
                     });
+                    shape.customLabel = 'Label';
                     shape.customShapeIdentifier = shapeIdentifiers.shapeRectangleIdentifier;
                     create.start(event, shape);
                 }
@@ -45,10 +46,11 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
             action: {
                 click: function () {
                     const shape = elementFactory.createShape({
-                        width: 120,
-                        height: 120,
+                        width: 100,
+                        height: 80,
                         isFrame: true
                     });
+                    shape.customLabel = 'Label';
                     shape.customShapeIdentifier = shapeIdentifiers.shapeCircleIdentifier;
                     create.start(event, shape);
                 }
@@ -61,10 +63,11 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
             action: {
                 click: function () {
                     const shape = elementFactory.createShape({
-                        width: 120,
+                        width: 100,
                         height: 80,
                         isFrame: true
                     });
+                    shape.customLabel = 'Label';
                     shape.customShapeIdentifier = shapeIdentifiers.shapeComposedShapeIdentifier;
                     create.start(event, shape);
                 }

@@ -1,32 +1,31 @@
-import {append, append as svgAppend, appendTo, attr as svgAttr, create, create as svgCreate} from "tiny-svg";
+import {append as svgAppend, attr as svgAttr, create as svgCreate} from "tiny-svg";
 import * as shapeIdentifiers from './EvaluationShapes'
 
 export const CustomElementStyleModule = {
     __init__: [
-        [ 'defaultRenderer', function(defaultRenderer) {
+        ['defaultRenderer', function (defaultRenderer) {
             // override default styles
-            defaultRenderer.CONNECTION_STYLE = { fill: 'none', strokeWidth: 5, stroke: '#000' };
-            defaultRenderer.SHAPE_STYLE = { fill: 'white', stroke: '#000', strokeWidth: 2 };
-            defaultRenderer.FRAME_STYLE = { fill: 'none', stroke: '#000', strokeDasharray: 4, strokeWidth: 2 };
+            defaultRenderer.CONNECTION_STYLE = {fill: 'none', strokeWidth: 5, stroke: '#000'};
+            defaultRenderer.SHAPE_STYLE = {fill: 'white', stroke: '#000', strokeWidth: 2};
+            defaultRenderer.FRAME_STYLE = {fill: 'none', stroke: '#000', strokeDasharray: 4, strokeWidth: 2};
             defaultRenderer.drawShape = customRenderer;
-        } ]
+        }]
     ]
 };
 
 /**
  * Override default look and feel of example
  */
-
 const customRenderer = function (visuals, element) {
-    if(element.customShapeIdentifier === shapeIdentifiers.shapeRectangleIdentifier){
+    if (element.customShapeIdentifier === shapeIdentifiers.shapeRectangleIdentifier) {
         return createRectangleShape(element, visuals);
     }
 
-    if(element.customShapeIdentifier === shapeIdentifiers.shapeCircleIdentifier){
+    if (element.customShapeIdentifier === shapeIdentifiers.shapeCircleIdentifier) {
         return createCircleShape(element, visuals);
     }
 
-    if(element.customShapeIdentifier === shapeIdentifiers.shapeComposedShapeIdentifier){
+    if (element.customShapeIdentifier === shapeIdentifiers.shapeComposedShapeIdentifier) {
         return createComposedShape(element, visuals);
     }
 }
@@ -42,9 +41,18 @@ function createCircleShape(element, visuals) {
         strokeWidth: 3
     });
 
-    console.log(circle);
+    let text = svgCreate('text');
+    svgAttr(text, {
+        x: '0',
+        y: '-10'
+    });
+
+    // function signature in typing incorrect, seems to work this way.
+    // see https://github.com/bpmn-io/bpmn-js-example-custom-elements
+    svgAppend(text, document.createTextNode(element.customLabel));
 
     svgAppend(visuals, circle);
+    svgAppend(visuals, text);
 
     return circle;
 }
@@ -57,13 +65,21 @@ function createRectangleShape(element, visuals) {
         fill: 'none',
         stroke: 'black',
         strokeWidth: 3,
-        width: element.width ,
+        width: element.width,
         height: element.height
     });
 
-    svgAppend(visuals, rect);
+    let text = svgCreate('text');
+    svgAttr(text, {
+        x: '0',
+        y: '-10'
+    });
 
-    console.log(rect);
+    svgAppend(text, document.createTextNode(element.customLabel));
+
+    svgAppend(visuals, rect);
+    svgAppend(visuals, text);
+
     return rect;
 }
 
@@ -91,6 +107,16 @@ function createComposedShape(element, visuals) {
         stroke: 'black',
         strokeWidth: 3
     });
+
+    let text = svgCreate('text');
+    svgAttr(text, {
+        x: '0',
+        y: '-10'
+    });
+
+    svgAppend(text, document.createTextNode(element.customLabel));
+
+    svgAppend(visuals, text);
 
     svgAppend(visuals, svgGroup);
     svgAppend(visuals, rect);

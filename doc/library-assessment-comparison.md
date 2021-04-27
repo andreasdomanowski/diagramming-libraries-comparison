@@ -8,6 +8,7 @@ Disclaimer: all information which was taken into account for the decision for or
 - implementation effort for usability aspects
 - support and questions
 - miscellaneous aspects
+- problems
 
 ## JointJS
 ### Initial Effort to Get Started
@@ -25,6 +26,8 @@ Disclaimer: all information which was taken into account for the decision for or
 - resize handlers have to be implemented by hand - big con!
 ### Support and Questions
 -  many posts on StackOverflow, issues with solutions on GitHub
+### Problems
+- no auto resize of shapes - has to be implemented manually
  
 
 ## Diagram.js
@@ -34,7 +37,10 @@ Disclaimer: all information which was taken into account for the decision for or
 - just one example repository
 - documentation mainly in code, just very patchy top level architecture document in a repo of bpmn.io
   - usage of DI framework makes getting an initial overview more cumbersome compared with JointJS
+- very modular approach, but no documentation, which modules exist and how they can be used
 ### Ease Of Implementing the Requirements
+- editor creation not as intuitive as with JointJS
+- serialization was cumbersome, due to DiagramJS not supporting it out of the box
 ### Customizability
 - custom shapes are created easily due to the usage of tiny-svg, a nice toolset for SVG
 ### Implementation Effort for Usability Aspects
@@ -46,4 +52,9 @@ Disclaimer: all information which was taken into account for the decision for or
 - [example editor](https://github.com/bpmn-io/diagram-js-examples) provided by maintainers contains bugs that catch the eye
   - if an element is clicked repeatedly, it gets stuck to the mouse pointer and can't be dropped
   - moving the predefined connected rectangles results in the link having the highest "z-index". Combined with the anchor being the middle of the rectangle, this definitely catches the eye, too
-  
+### Problems
+- things initially thought to be included like label rendering is not supported out of the box
+  - therefore, it's a hurdle to implement basic requirements
+  - though there are nice implementations of e.g. a [direct label editor](https://github.com/bpmn-io/diagram-js-direct-editing), a custom text renderer has to be implemented
+- important architecture and implementation aspects like the names of events, or the interaction of core modules isn't documented at all
+  - several aspects were just documented in answers in the message board of bpmn-js
