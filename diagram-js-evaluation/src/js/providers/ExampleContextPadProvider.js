@@ -36,7 +36,7 @@ ExampleContextPadProvider.prototype.getContextPadEntries = function(element) {
 
     let inputField = $("#"+dom_identifier.modalEditPropertyContent);
     inputField.val(element.customLabel);
-    // if this was not a proof of concept, listener should be removed again
+    // if this was not a proof of concept, listener should i) be removed again and ii) be on modal close event
     inputField.on("change", function (){
       element.customLabel = inputField.val();
       modeling._eventBus.fire('element.changed', { element: element });
