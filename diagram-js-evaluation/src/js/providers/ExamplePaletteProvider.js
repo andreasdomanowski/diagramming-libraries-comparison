@@ -29,7 +29,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
             action: {
                 click: function () {
                     const shape = elementFactory.createShape({
-                        width: 120,
+                        width: 100,
                         height: 80,
                         isFrame: true
                     });
@@ -46,8 +46,8 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
             action: {
                 click: function () {
                     const shape = elementFactory.createShape({
-                        width: 120,
-                        height: 120,
+                        width: 100,
+                        height: 80,
                         isFrame: true
                     });
                     shape.customLabel = 'Label';
@@ -63,7 +63,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
             action: {
                 click: function () {
                     const shape = elementFactory.createShape({
-                        width: 120,
+                        width: 100,
                         height: 80,
                         isFrame: true
                     });
