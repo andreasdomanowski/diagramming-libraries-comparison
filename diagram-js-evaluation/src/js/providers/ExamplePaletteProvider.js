@@ -33,6 +33,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
                         height: 80,
                         isFrame: true
                     });
+                    shape.customLabel = 'Label';
                     shape.customShapeIdentifier = shapeIdentifiers.shapeRectangleIdentifier;
                     create.start(event, shape);
                 }
@@ -49,6 +50,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
                         height: 120,
                         isFrame: true
                     });
+                    shape.customLabel = 'Label';
                     shape.customShapeIdentifier = shapeIdentifiers.shapeCircleIdentifier;
                     create.start(event, shape);
                 }
@@ -65,6 +67,7 @@ ExamplePaletteProvider.prototype.getPaletteEntries = function () {
                         height: 80,
                         isFrame: true
                     });
+                    shape.customLabel = 'Label';
                     shape.customShapeIdentifier = shapeIdentifiers.shapeComposedShapeIdentifier;
                     create.start(event, shape);
                 }
