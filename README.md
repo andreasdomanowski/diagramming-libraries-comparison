@@ -1,3 +1,4 @@
+![Build and Deploy](https://github.com/andreasdomanowski/diagramming-libraries-comparison/actions/workflows/build-and-deploy-to-gh-pages.yml/badge.svg)
 # Comparing diagramming libraries for the generation of editors based on meta models
 ## About this repository
 A part of my diploma thesis (_Model-Driven, (Semi-)Automatic Generation of Lightweight, Client-Side, Online Diagram Editors_) deals with the generation of client-side diagram editors based on meta models.
