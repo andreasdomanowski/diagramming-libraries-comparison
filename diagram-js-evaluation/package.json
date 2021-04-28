@@ -21,6 +21,7 @@
     "diagram-js": "^7.2.3",
     "html-webpack-plugin": "^5.3.1",
     "jquery": "^3.6.0",
+    "popper.js": "^1.16.1",
     "style-loader": "^2.0.0",
     "tiny-svg": "^2.2.2",
     "webpack": "^5.33.2",
