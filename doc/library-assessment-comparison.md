@@ -41,6 +41,7 @@ Disclaimer: all information which was taken into account for the decision for or
 ### Ease Of Implementing the Requirements
 - editor creation not as intuitive as with JointJS
 - serialization was cumbersome, due to DiagramJS not supporting it out of the box
+- palette and shape creation was very comfortable
 ### Customizability
 - custom shapes are created easily due to the usage of tiny-svg, a nice toolset for SVG
 ### Implementation Effort for Usability Aspects
